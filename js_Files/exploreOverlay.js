@@ -12,7 +12,7 @@ function removeExplore(){
 function closeExplore(){
     setTimeout(() => {
       return removeExplore()
-    }, "5000")   
+    }, "500000")   
 }
 
 function displayExplore(){
