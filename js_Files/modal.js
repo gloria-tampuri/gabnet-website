@@ -29,6 +29,7 @@ const minusIcon6=document.querySelector('.minustoggle6');
 const secondDrop6= document.querySelector('.drop__toggle6');
 
 
+console.log(plusIcon5);
 // funtions
 function showSideMenu (){
    
@@ -55,6 +56,7 @@ function firstToggle(){
         plusIcon.style.display = 'block';
         exploreDropUp.style.display = 'block';
         exploreDropdown.style.display = 'none';
+        minusIcon.style.display = 'none'
         minusIcon2.style.display= 'none';//Added by KBQ
         minusIcon3.style.display= 'none';
         minusIcon4.style.display= 'none';
@@ -66,6 +68,7 @@ function closeToggle(){
     exploreDropUp.style.display = 'none'
     exploreDropdown.style.display = 'block';
     firstDrop.style.display='none'
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
        
 }
 
@@ -73,18 +76,22 @@ function secondToggle(){
 secondDrop.style.display = 'block'
 plusIcon.style.display = 'none';
 minusIcon.style.display = 'block'
+  console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
+  console.log(newToggleBtn);
 }
 
 function hideToggle(){
     minusIcon.style.display = 'none';
     plusIcon.style.display = 'block'
     secondDrop.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
 
 function secondToggle2(){
     secondDrop2.style.display = 'block'
     minusIcon2.style.display = 'block'//Added by KBQ
     plusIcon2.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
     }
     
 
@@ -92,12 +99,14 @@ function hideToggle2(){
     minusIcon2.style.display = 'none';
     plusIcon2.style.display = 'block'
     secondDrop2.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
 
 function secondToggle3(){
     secondDrop3.style.display = 'block'
     minusIcon3.style.display = 'block'
     plusIcon3.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
     }
     
 
@@ -105,12 +114,14 @@ function hideToggle3(){
     minusIcon3.style.display = 'none';
     plusIcon3.style.display = 'block'
     secondDrop3.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
 
 function secondToggle4(){
     secondDrop4.style.display = 'block'
     minusIcon4.style.display = 'block'
     plusIcon4.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
     }
     
 
@@ -118,25 +129,29 @@ function hideToggle4(){
     minusIcon4.style.display = 'none';
     plusIcon4.style.display = 'block'
     secondDrop4.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
 
 function secondToggle5(){
     secondDrop5.style.display = 'block'
     minusIcon5.style.display = 'block'
     plusIcon5.style.display = 'none' 
-    }
+    console.log('Close item 5');
+}
     
 
 function hideToggle5(){
     minusIcon5.style.display = 'none';
     plusIcon5.style.display = 'block'
     secondDrop5.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
 
 function secondToggle6(){
     secondDrop6.style.display = 'block'
     minusIcon6.style.display = 'block'
     plusIcon6.style.display = 'none' 
+    console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
     }
     
 
@@ -144,8 +159,9 @@ function hideToggle6(){
     minusIcon6.style.display = 'none';
     plusIcon6.style.display = 'block'
     secondDrop6.style.display = 'none' 
+      console.log('adsfdsafdsafdsfsda asdfhasdfsdfsd');
 }
-
+console.log(secondToggle5);
 
 //  call to action;
 menuBtn.addEventListener('click', showSideMenu);
