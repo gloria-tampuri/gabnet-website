@@ -15,6 +15,12 @@ function closeExplore(){
     }, "500000")   
 }
 
+function onScroll(e){
+  console.log('helllloooo');
+  return removeExplore();
+  
+}
+
 function displayExplore(){
  exploreOverlay.style.display = 'flex';
  return closeExplore()
@@ -25,4 +31,5 @@ function displayExplore(){
 // Calling Declared Function
 exploreLink.addEventListener('mouseover' , displayExplore)
 body.addEventListener('click', removeExplore)
+body.onscroll = onScroll;
 closeExplore()
