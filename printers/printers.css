@@ -84,6 +84,11 @@
             cursor: pointer;
         }
 
+        .refurbished{
+            margin-top: 12rem;
+            
+        }
+
 
 
         @media (max-width: 700px){
