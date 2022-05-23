@@ -102,6 +102,11 @@
             #feature-heading h2{
                 font-size: 2rem;
             }
+
+            .categoryHeaders{
+                width: 80%;
+                text-align: center;
+            }
         }
         
         @media (max-width: 376px){
@@ -110,4 +115,6 @@
                 margin:0 1.5rem;
             
             }
+
+    
         }
