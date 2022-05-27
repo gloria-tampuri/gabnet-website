@@ -79,6 +79,11 @@
             border-top-left-radius: 15px;
         }
 
+        .call p a{
+            color:#0C2850;
+            text-decoration: none;
+        }
+
         .call:hover{
             background-color: #be882a;
             color: white;
