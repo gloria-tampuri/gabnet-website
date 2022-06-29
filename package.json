@@ -4,7 +4,8 @@
   "description": "",
   "main": "modal.js",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+    "build": "lite-server"
   },
   "repository": {
     "type": "git",
