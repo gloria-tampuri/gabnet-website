@@ -4,8 +4,7 @@
   "description": "",
   "main": "modal.js",
   "scripts": {
-    "start": "lite-server",
-    "build": "lite-server"
+   
   },
   "repository": {
     "type": "git",
@@ -17,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/gloria-tampuri/gabnet-website/issues"
   },
-  "homepage": "https://github.com/gloria-tampuri/gabnet-website#readme",
-  "dependencies": {
-    "lite-server": "^2.6.1"
-  }
+  "homepage": "https://github.com/gloria-tampuri/gabnet-website#readme"
 }
