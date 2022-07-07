@@ -55,6 +55,10 @@ color: white;
     color: var(--primary-blue);
 }
 
+.logoimg img{
+    width: 9rem;
+}
+
 .search-div{
     width: 80%;
     height: fit-content;
@@ -145,6 +149,13 @@ header nav ul li a {
         margin-left: 20%;
  }
 
+ .logoimg img{
+    width:7rem;
+}
+
+.logoimgB img{
+display: none;
+}
     
     
 }
