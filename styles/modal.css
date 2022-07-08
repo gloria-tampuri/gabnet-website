@@ -24,15 +24,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
-#modal-head h1 a{
-    text-decoration: none;
-    color: white;
+.modal-image a img{
+   width: 6rem;
+   
 }
 
 #modal-head svg {
 width: 2rem;
+color: #0C2850;
 }
 
 .modal nav  ul li{
