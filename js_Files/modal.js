@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector('#menu svg');
+const menuBtn = document.querySelector('.menu svg');
 const closeBtn = document.getElementById('hide');
 const backdrop = document.querySelector('.backdrop');
 const modalMenu = document.querySelector('.modal');
