@@ -129,6 +129,7 @@ header nav ul li a {
 
 .menu{
     display: none;
+    padding: 0 1rem;
     /* background-color: aliceblue; */
     justify-content: space-between;
     align-items: center;
