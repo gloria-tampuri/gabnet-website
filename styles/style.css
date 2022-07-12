@@ -131,13 +131,14 @@ header nav ul li a {
     display: none;
     /* background-color: aliceblue; */
     justify-content: space-between;
+    align-items: center;
 }
 .menu svg{
-    width: 2.6rem;
+    width:50px;
 }
 
 .menu img{
-    width: 150px;
+    width: 100px;
 }
 
 
