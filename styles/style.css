@@ -153,6 +153,9 @@ header nav ul li a {
     border-radius: 0.5rem;
     overflow: hidden;
 }
+.smallscreen-search svg{
+display: none;
+}
 
 .onCkick{
     width: 50%;
