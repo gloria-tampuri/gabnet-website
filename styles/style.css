@@ -135,11 +135,13 @@ header nav ul li a {
     align-items: center;
 }
 .menu svg{
+    order: 2;
     width:50px;
 }
 
 .menu img{
-    width: 100px;
+    width: 120px;
+    order:1;
 }
 
 
