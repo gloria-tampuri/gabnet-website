@@ -1,3 +1,0 @@
-# gabnet-website
-
-Hello, Welcome
