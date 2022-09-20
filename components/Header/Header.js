@@ -1,5 +1,7 @@
 import React,{useState, useContext} from 'react'
+import { MobileModalContext } from '../../context/MobileModalContext'
 import { ModalContext } from '../../context/ModalContext'
+import MobileNavigation from '../MobileNavigation/MobileNavigation'
 import Explore from './Explore/Explore'
 import classes from './Header.module.css'
 import Logo from './Logo/Logo'
@@ -9,7 +11,9 @@ import Search from './Search/Search'
 
 const Header = () => {
   const exploreModalContext = useContext(ModalContext)
+  
 
+ 
 const {exploreModal } =exploreModalContext
   
 
@@ -20,6 +24,7 @@ const {exploreModal } =exploreModalContext
         <Search />
         <Navigation/>
         { exploreModal && <Explore/>}
+       
       </div>
      
     </div>

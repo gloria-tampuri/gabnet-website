@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const MobileModalContext = createContext(null)
 
-export const MobileModalContextProvider = ({children}) => {
+export const MobileModalContextProvider = ({ children }) => {
     const [mobileModal, setMobileModal] = useState(false)
 
     const showMobileModal = () => {
