@@ -55,33 +55,33 @@ const Contact = () => {
 
                     <div className={classes.cone}>
                     </div>
-                    <div class={classes.circle}>
+                    <div className={classes.circle}>
                     </div>
                 </div>
 
                 <div className={classes.yourcontact}>
                     <form action="" className={classes.form}>
                         <div className={classes.formsection}>
-                            <label for="first-name">First Name</label>
+                            <label htmlFor="first-name">First Name</label>
                             <input type="text" name="first-name" id="first-name" placeholder="John" />
                         </div>
 
                         <div className={classes.formsection}>
-                            <label for="last-name">Last Name</label>
+                            <label htmlFor="last-name">Last Name</label>
                             <input type="text" name="last-name" id="last-name" placeholder="Doe" />
                         </div>
 
                         <div className={classes.formsection}>
-                            <label for="mail">Mail</label>
+                            <label htmlFor="mail">Mail</label>
                             <input type="email" name="mail" id="mail" placeholder="Enter email" />
                         </div>
 
                         <div className={classes.formsection}>
-                            <label for="phone">Phone</label>
+                            <label htmlFor="phone">Phone</label>
                             <input type="tel" name="phone" id="phone" placeholder="Enter phone number" />
                         </div>
                         <div className={`${classes.formsection} ${classes.textarea}`}>
-                            <label for="message"> Message</label>
+                            <label htmlFor="message"> Message</label>
                             <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
                         <button className={classes.button}>Send Message</button>
