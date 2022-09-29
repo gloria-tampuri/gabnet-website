@@ -2,18 +2,21 @@ import React from 'react'
 import {createClient} from 'contentful'
 import Hero from '../components/Hero/Hero'
 import Layout from '../components/Layout/Layout'
-import Products from '../components/Products/Products'
+import Featured from '../components/Featured/Featured'
+
+
+
 
 
 const Index = (props) => {
-
   console.log(props.products);
-
   return (
- <Layout>
-  <Hero/>
-  <Products/>
- </Layout>
+    
+      <Layout>
+        <Hero />
+        <Featured/>
+      </Layout>
+   
   )
 }
 

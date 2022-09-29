@@ -1,13 +1,19 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import classes from './Hero.module.css'
 import Link from 'next/link'
+import { ModalContext } from '../../context/ModalContext'
 
 
 
 const Hero = () => {
+
+  const exploreModalContext =useContext(ModalContext)
+
+  const {hideExplore} = exploreModalContext;
+
   return (
 
-    <div className={classes.heropage}>
+    <div className={classes.heropage} onClick={hideExplore}>
 
       <div className={classes.words}>
         <h1> Providing Solutions to all your Printing needs</h1>

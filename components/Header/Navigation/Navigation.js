@@ -1,12 +1,20 @@
-import React ,{useState}from 'react'
+import React ,{useState, useContext}from 'react'
 import classes from './Navigation.module.css'
 import Link from 'next/link'
 import {HiOutlineMenuAlt2} from 'react-icons/hi'
+import { ModalContext } from '../../../context/ModalContext'
+import { MobileModalContext } from '../../../context/MobileModalContext'
 
-const Navigation = ({showExplore}) => {
+const Navigation = () => {
 
+    const exploreModalContext = useContext(ModalContext)
+    const mobileModalC = useContext(MobileModalContext)
 
+    const {mobileModal, showMobileModal} = mobileModalC
 
+    console.log(mobileModal);
+
+const {showExplore} = exploreModalContext
     return (
         <div className={classes.Navigation}>
             <nav>
@@ -16,7 +24,7 @@ const Navigation = ({showExplore}) => {
                     <li><Link href='contact'><a>Contact</a></Link></li>
                 </ul>   
             </nav>
-            <div><HiOutlineMenuAlt2  className={classes.menu}/></div>
+            <div><HiOutlineMenuAlt2  className={classes.menu} onClick={showMobileModal}/></div>
         </div>
     )
 }
