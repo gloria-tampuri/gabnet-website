@@ -9,12 +9,13 @@ import Featured from '../components/Featured/Featured'
 
 
 const Index = (props) => {
-  console.log(props.products);
+  const {products} = props
+  const {featuredProducts, productCategories,allProducts} = products
+
   return (
-    
-      <Layout>
+      <Layout products={allProducts}>
         <Hero />
-        <Featured/>
+        <Featured products={featuredProducts}/>
       </Layout>
    
   )
@@ -33,8 +34,13 @@ export async function getStaticProps() {
   const response = await client.getEntries({
     content_type:'products'
   })
+  
+client.getEntry()
+  const featuredProducts = response?.items.filter((product)=>product.fields.featured === true)
+
+  const productCategories= response?.items.filter((product)=>product.fields.category === "PRINTERS")
 
   return {
-    props: {products: response.items, revalidate: 1}
+    props: {products: {allProducts:response?.items, featuredProducts, productCategories}, revalidate: 1}
   }
 }

@@ -1,0 +1,6 @@
+.ExploreList ul li{
+    color: var(--yellow-prime);
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}

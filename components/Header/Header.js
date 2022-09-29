@@ -9,11 +9,8 @@ import Navigation from './Navigation/Navigation'
 import Search from './Search/Search'
 
 
-const Header = () => {
+const Header = ({products}) => {
   const exploreModalContext = useContext(ModalContext)
-  
-
- 
 const {exploreModal } =exploreModalContext
   
 
@@ -23,7 +20,7 @@ const {exploreModal } =exploreModalContext
         <Logo />
         <Search />
         <Navigation/>
-        { exploreModal && <Explore/>}
+        { exploreModal && <Explore products={products}/>}
        
       </div>
      
