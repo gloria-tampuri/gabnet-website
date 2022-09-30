@@ -27,7 +27,7 @@ onInit={(typewriter) => {
       console.log('String typed out!');
     })
     .start();
-}}
+}}     
 /></h1>
        </LightSpeed>
         

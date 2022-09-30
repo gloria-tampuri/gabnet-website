@@ -1,8 +1,8 @@
 import React from 'react'
 import {createClient} from 'contentful'
-import Hero from '../components/Hero/Hero'
 import Layout from '../components/Layout/Layout'
 import Featured from '../components/Featured/Featured'
+import CarouselPage from '../components/Carousel/CarouselPage'
 
 
 
@@ -14,7 +14,7 @@ const Index = (props) => {
 
   return (
       <Layout products={allProducts}>
-        <Hero />
+       <CarouselPage/>
         <Featured products={featuredProducts}/>
       </Layout>
    

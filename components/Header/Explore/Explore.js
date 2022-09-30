@@ -6,9 +6,9 @@ const Explore = ({products}) => {
   return (
     <div className={classes.exploreoverlay} >
     <h2>Explore overlay</h2>
-    {products.map(product => <ul>
+    {/* {products.map(product => <ul>
       <li>{product.fields.category}</li>
-    </ul>)}
+    </ul>)} */}
 </div>
   )
 }

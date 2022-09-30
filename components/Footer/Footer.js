@@ -4,12 +4,14 @@ import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 import {IoIosCall} from 'react-icons/io'
 import {IoLocationSharp} from 'react-icons/io5'
 import {MdEmail} from 'react-icons/md'
+import Fade from 'react-reveal/Fade';
 import Link from 'next/link'
 
 const Footer = () => {
   return (
-  
-    <div className={classes.footer}>
+<Fade bottom>
+    
+<div className={classes.footer}>
            <p>Country/Region: Ghana</p>
 
            <hr/>
@@ -94,6 +96,7 @@ const Footer = () => {
 
 
     </div>
+</Fade>
 
   )
   

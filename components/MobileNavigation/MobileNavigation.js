@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-
+import Fade from 'react-reveal/Fade';
 import classes from './MobileNavigation.module.css'
 import Image from 'next/image'
 import logo from '../../public/access/gabnet Logo.png'
@@ -20,7 +20,8 @@ const MobileNavigation = () => {
 
 
   return (
-    <div className={classes.mobile}>
+   <Fade left>
+     <div className={classes.mobile}>
       <div className={classes.mheader}>
         <div className={classes.mlogo}> <Link href='/'><a><Image src={logo} alt='gabnet logo' onClick={hideMobileModal} /> </a>
         </Link></div>
@@ -41,6 +42,7 @@ const MobileNavigation = () => {
         </ul>
       </nav>
     </div>
+   </Fade>
   )
 }
 
