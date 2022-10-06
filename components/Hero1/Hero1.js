@@ -12,7 +12,7 @@ const Hero1 = () => {
         <h1>Providing Excellent Printers for Offices and Businesses</h1>
         <p>A Variety of printers and brands for you to choose from. We make your businesses easier and better</p>
 
-        <Bounce left> <Link href='/contact'><a>LOCATE US</a></Link></Bounce>
+        <Bounce top  delay={3500}> <Link href='/contact'><a>LOCATE US</a></Link></Bounce>
     </div>
      <div className={classes.mages}>
         <Image src={groupPrinters} alt='groupPrinters'/>

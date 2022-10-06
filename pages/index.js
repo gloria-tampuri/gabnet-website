@@ -35,7 +35,7 @@ export async function getStaticProps() {
     content_type:'products'
   })
   
-client.getEntry()
+
   const featuredProducts = response?.items.filter((product)=>product.fields.featured === true)
 
   const productCategories= response?.items.filter((product)=>product.fields.category === "PRINTERS")

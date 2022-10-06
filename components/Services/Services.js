@@ -16,7 +16,7 @@ import brand5 from '../../public/access/brands/5.jpg'
 
 const Services = () => {
   return (
-  <Layout>
+<>
 
 <div className={classes.serviceheader}>
             <h2>Our Services</h2>
@@ -128,8 +128,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-
-  </Layout>
+        </>
   )
 }
 

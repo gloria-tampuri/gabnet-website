@@ -17,7 +17,8 @@
     "react-icons": "^4.4.0",
     "react-reveal": "^1.2.2",
     "styled-components": "^5.3.6",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "8.23.1",

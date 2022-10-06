@@ -9,7 +9,7 @@ import { MobileModalContext } from '../../context/MobileModalContext'
 
 
 
-const Layout = ({ children,products }) => {
+const Layout = ({ children,products,categories }) => {
   const exploreModalContext = useContext(ModalContext)
   const { hideExplore } = exploreModalContext;
 
@@ -42,7 +42,7 @@ const Layout = ({ children,products }) => {
   return (
     <div className={classes.layout} onClick={hideExplore}>
       {mobileModal && <MobileNavigation/>}
-      <Header products={products} />
+      <Header products={products} categories={categories} />
       <div>{children}</div>
       <Footer />
     </div>

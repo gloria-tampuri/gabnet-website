@@ -7,7 +7,7 @@ import Hero2 from '../Hero2/Hero2'
 const CarouselPage = () => {
   return (
     <div>
-      <Carousel autoplay >
+      <Carousel autoplay withoutControls={true}>
         <Hero />
         <Hero1 />
         <Hero2 />
