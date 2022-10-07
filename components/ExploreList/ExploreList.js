@@ -1,18 +1,21 @@
 import React from 'react'
 import classes from './ExploreList.module.css'
-import {AiOutlinePlus} from 'react-icons/ai'
+import { AiOutlinePlus } from 'react-icons/ai'
+import ListSubCategoryMobile from '../Header/Explore/ListSubCategoryMobile'
 
-const ExploreList = () => {
+
+const ExploreList = ({ categories }) => {
+ 
+
   return (
-    <div className={classes.ExploreList}>
-        <ul>
-            <li> <span>Printers</span> <span><AiOutlinePlus/></span></li>
-            <li>Screen Printing</li>
-            <li>Embroidery Machines</li>
-            <li>Toners and Inks</li>
-            <li>Printing Spare Parts </li>
-            <li>Heavy Duty Machines </li> 
-        </ul>
+    <div>
+
+      {categories && categories.map(category => <ul  key={category} >
+        <li className={classes.ExploreList}><p>{category.trim()}</p> <span><AiOutlinePlus/></span> </li>
+
+         
+           <ListSubCategoryMobile className={classes.sublist} category={category}/>
+      </ul>)}
     </div>
   )
 }

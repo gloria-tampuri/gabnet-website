@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useEffect,useState,useContext} from 'react'
+import { useRouter } from 'next/router';
 import Fade from 'react-reveal/Fade';
 import classes from './MobileNavigation.module.css'
 import Image from 'next/image'
@@ -8,9 +9,12 @@ import Link from 'next/link'
 import { MobileModalContext } from '../../context/MobileModalContext'
 import { ExploreDropdownContext } from '../../context/ExploreContext'
 import ExploreList from '../ExploreList/ExploreList'
+import { getProductCategories } from '../../Helpers/queries';
 
 const MobileNavigation = () => {
+  const router = useRouter()
   const mobileModalC = useContext(MobileModalContext)
+  const [categories, setCategories] = useState()
   const exploreDropdown = useContext(ExploreDropdownContext)
 
   const { hideMobileModal } = mobileModalC
@@ -18,6 +22,19 @@ const MobileNavigation = () => {
 
   const{dropdown, showDropdown, hideDropdown} = exploreDropdown
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getProductCategories()
+      setCategories(products);
+    }
+
+    fetchProducts()
+  }, [])
+
+  const closeAllNavs=()=>{
+    hideMobileModal()
+    hideDropdown()
+  }
 
   return (
    <Fade left>
@@ -25,7 +42,7 @@ const MobileNavigation = () => {
       <div className={classes.mheader}>
         <div className={classes.mlogo}> <Link href='/'><a><Image src={logo} alt='gabnet logo' onClick={hideMobileModal} /> </a>
         </Link></div>
-        <AiOutlineClose className={classes.AiOutlineClose} onClick={hideMobileModal} />
+        <AiOutlineClose className={classes.AiOutlineClose} onClick={closeAllNavs} />
 
       </div>
 
@@ -33,11 +50,11 @@ const MobileNavigation = () => {
         <ul>
           <li className={classes.explore}>Explore {dropdown ? <AiOutlineUp className={classes.AiOutlineDown} onClick={hideDropdown}/> : <AiOutlineDown className={classes.AiOutlineDown} onClick={showDropdown} />  }</li>
 
-          {dropdown ? <ExploreList/> : ''}
+          {dropdown ? <ExploreList categories={categories}/> : ''}
           <hr />
-          <li onClick={hideMobileModal}><Link href='services'><a>Services</a></Link></li>
+          <li onClick={hideMobileModal} className={classes.mobilenavlist}><a onClick={()=>router.push('/services')}>Services</a></li>
           <hr />
-          <li onClick={hideMobileModal}><Link href='contact'><a>Contact</a></Link></li>
+          <li onClick={hideMobileModal}  className={classes.mobilenavlist}><a onClick={()=>router.push('/contact')}>Contact</a></li>
           <hr />
         </ul>
       </nav>

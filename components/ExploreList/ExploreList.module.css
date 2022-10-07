@@ -1,6 +1,15 @@
-.ExploreList ul li{
+
+.ExploreList{
     color: var(--yellow-prime);
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
 }
+.ExploreList span{
+    font-size: 1.3rem;
+}
+.sublist{
+    color: aqua;
+    font-size: 0.5rem;
+    padding-left: 1rem;
+} 

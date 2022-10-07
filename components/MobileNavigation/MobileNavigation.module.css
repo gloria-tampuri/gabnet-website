@@ -35,7 +35,7 @@
     margin: 2rem 0;
 }
 
-.mobilenav ul li{
+.mobilenavlist{
     list-style: none;
     font-size: 1.2rem;
     padding: 0.5rem 0;
@@ -47,6 +47,9 @@
 .explore{
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
 }
 
 .AiOutlineDown, .AiOutlineUp{

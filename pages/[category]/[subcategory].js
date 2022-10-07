@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import { getProducts, getSubcategories } from '../../Helpers/queries'
-import { slugify } from '../../Helpers/slugify'
+import { slugify, unSlugify } from '../../Helpers/slugify'
+import classes from '../../components/Category/CategoryPage.module.css'
+import Layout from '../../components/Layout/Layout'
 
 
 const SubCategoriesPage = () => {
@@ -24,13 +26,27 @@ const SubCategoriesPage = () => {
   console.log(products);
 
   return (
-    <div>
+  <Layout>
+     <div className={classes.categoryPage}>
+     <h1>{subcategory && subcategory.toUpperCase().replaceAll('-', ' ')}</h1>
+      <div className={classes.griddy}>
       {products && products.map(product => <div key={product.sys.id}>
-        {/* <h1 className={pageHeader}>{product.fields.subCategory}</h1> */}
-       <img src={product.fields.image.fields.file.url} alt={product.fields.title} />
-       <h1>{product.fields.title}</h1> 
-      </div> )}
+       
+        <div  className={classes.card}>
+        <div className={classes.imagediv}> <img src={product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
+       <div className={classes.description}> 
+       <h4>{product.fields.title}</h4> 
+       <p>{product.fields.description}</p>
+       </div>
+       <div className={classes.callNow}>
+              <p> <a href="tel:+233595850394">Call now</a>
+              </p>
+            </div> </div>
+      </div> 
+      )}
+      </div>
     </div>
+  </Layout>
   )
 }
 
