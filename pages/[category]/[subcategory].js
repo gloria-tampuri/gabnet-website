@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import { getProducts, getSubcategories } from '../../Helpers/queries'
 import { slugify } from '../../Helpers/slugify'
-import Image from 'next/image'
+
 
 const SubCategoriesPage = () => {
   const router = useRouter()
