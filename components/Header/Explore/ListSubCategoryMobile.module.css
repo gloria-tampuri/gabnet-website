@@ -1,0 +1,6 @@
+.linkList{
+  padding-left: 1rem;
+    list-style: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}

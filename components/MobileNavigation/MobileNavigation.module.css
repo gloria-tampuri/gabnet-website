@@ -1,6 +1,6 @@
 .mobile{
     position: fixed;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* top:0;
     left: 5%; */
     width: 100%;
@@ -8,7 +8,7 @@
     background-color:#0C2850;
     color: white;
     padding: 1rem;
-    overflow: hidden;
+    overflow: auto;
     z-index: 1;
 }
 

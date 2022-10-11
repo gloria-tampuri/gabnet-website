@@ -4,6 +4,13 @@
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.ExploreList:hover{
+    background-color: white;
+    color: var(--blue-prime);
+    padding: 0 0.5rem;
 }
 .ExploreList span{
     font-size: 1.3rem;
@@ -12,4 +19,9 @@
     color: aqua;
     font-size: 0.5rem;
     padding-left: 1rem;
+  
 } 
+
+.sublist li {
+    list-style:none;
+}

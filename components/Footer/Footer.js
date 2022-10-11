@@ -6,6 +6,7 @@ import {IoLocationSharp} from 'react-icons/io5'
 import {MdEmail} from 'react-icons/md'
 import Fade from 'react-reveal/Fade';
 import Link from 'next/link'
+import Jump from 'react-reveal/Jump';
 
 const Footer = () => {
   return (
@@ -53,13 +54,16 @@ const Footer = () => {
                 </ul>
             </div>
 
+            <Jump duration={5000}>
             <div className={classes.rows}>
                <ul>
                <h4>Contact</h4>
-                <li className={classes.socialfoot}>
+             
+              <li className={classes.socialfoot}>
                   <IoIosCall className={classes.socialicon}/>
                   <Link href="tel:+233595850394"><a>+233595850394 / 0302243847</a></Link>
                 </li>
+              
 
                 <li className={classes.socialfoot}>
                   <IoIosCall className={classes.socialicon}/>
@@ -85,7 +89,7 @@ const Footer = () => {
                  </li>
                </ul>
             </div>
-
+              </Jump>
            
             </div>
 

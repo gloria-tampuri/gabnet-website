@@ -5,7 +5,11 @@
 
 .Navigation nav ul li {
    list-style: none;
+   cursor: pointer;
 }
+
+
+
 
 .menu{
     font-size: 4rem;

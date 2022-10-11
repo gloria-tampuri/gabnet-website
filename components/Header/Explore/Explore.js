@@ -32,7 +32,6 @@ const Explore = () => {
   return (
   <Zoom>
       <div className={classes.exploreoverlay} >
-      <h2>Explore overlay</h2>
       <div className={classes.explorelist}>
         {categories && categories.map(category => <ul key={category} >
           <li>{category.trim()}</li>

@@ -10,12 +10,15 @@ import { MobileModalContext } from '../../context/MobileModalContext'
 import { ExploreDropdownContext } from '../../context/ExploreContext'
 import ExploreList from '../ExploreList/ExploreList'
 import { getProductCategories } from '../../Helpers/queries';
+import {SubcategoryContext} from '../../context/SubcategoryContext'
 
 const MobileNavigation = () => {
   const router = useRouter()
   const mobileModalC = useContext(MobileModalContext)
   const [categories, setCategories] = useState()
   const exploreDropdown = useContext(ExploreDropdownContext)
+  const subCategory = useContext(SubcategoryContext)
+  const {hideCategory} = subCategory;
 
   const { hideMobileModal } = mobileModalC
   CloseEvent
@@ -35,6 +38,11 @@ const MobileNavigation = () => {
     hideMobileModal()
     hideDropdown()
   }
+ const closeAllSubCategories=()=>{
+  showDropdown()
+  hideCategory()
+ }
+
 
   return (
    <Fade left>
@@ -48,7 +56,7 @@ const MobileNavigation = () => {
 
       <nav className={classes.mobilenav}>
         <ul>
-          <li className={classes.explore}>Explore {dropdown ? <AiOutlineUp className={classes.AiOutlineDown} onClick={hideDropdown}/> : <AiOutlineDown className={classes.AiOutlineDown} onClick={showDropdown} />  }</li>
+          <li className={classes.explore}>Explore {dropdown ? <AiOutlineUp className={classes.AiOutlineDown} onClick={hideDropdown}/> : <AiOutlineDown className={classes.AiOutlineDown} onClick={closeAllSubCategories} />  }</li>
 
           {dropdown ? <ExploreList categories={categories}/> : ''}
           <hr />

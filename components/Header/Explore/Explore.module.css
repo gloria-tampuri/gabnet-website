@@ -34,6 +34,7 @@
 
 .exploreoverlay ul li{
     list-style: none;
+    cursor: pointer;
 }
 
 .subCategory{
@@ -41,4 +42,9 @@
     font-size: 0.7rem;
     font-weight: 400;
     /* padding: 0.3rem; */
+}
+
+.mobilelist li{
+    list-style:none;
+
 }

@@ -27,7 +27,7 @@ const Hero = () => {
           Machines, Screen Printing Machines, Embroidery Machines and many more.
         </p>
 
-        <Link href='/contact'><a>CONTACT US here and there to see more </a></Link>
+        <Link href='/contact'><a>CONTACT US</a></Link>
       </div>
 
     </div>

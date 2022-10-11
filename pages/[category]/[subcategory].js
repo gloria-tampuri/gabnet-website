@@ -4,6 +4,7 @@ import { getProducts, getSubcategories } from '../../Helpers/queries'
 import { slugify, unSlugify } from '../../Helpers/slugify'
 import classes from '../../components/Category/CategoryPage.module.css'
 import Layout from '../../components/Layout/Layout'
+import Bounce from 'react-reveal/Bounce';
 
 
 const SubCategoriesPage = () => {
@@ -28,10 +29,12 @@ const SubCategoriesPage = () => {
   return (
   <Layout>
      <div className={classes.categoryPage}>
+
      <h1>{subcategory && subcategory.toUpperCase().replaceAll('-', ' ')}</h1>
+    
       <div className={classes.griddy}>
       {products && products.map(product => <div key={product.sys.id}>
-       
+        <Bounce bottom  duration={3000}>
         <div  className={classes.card}>
         <div className={classes.imagediv}> <img src={product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
        <div className={classes.description}> 
@@ -42,9 +45,11 @@ const SubCategoriesPage = () => {
               <p> <a href="tel:+233595850394">Call now</a>
               </p>
             </div> </div>
+            </Bounce> 
       </div> 
       )}
       </div>
+    
     </div>
   </Layout>
   )
