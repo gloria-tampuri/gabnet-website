@@ -22,7 +22,7 @@ const CategoryPage = () => {
         }
         fetchData();
     }, [category])
-
+ console.log(products);
 
     return (
         <Layout>
