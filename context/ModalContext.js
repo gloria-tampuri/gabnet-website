@@ -4,7 +4,7 @@ import {createContext, useState} from "react";
 
  export const ModalContextProvider=({children})=>{
     const [exploreModal, setExploreModal] = useState(false)
- console.log(exploreModal);
+
     const showExplore=()=>{
         setExploreModal(true)
     }

@@ -10,7 +10,7 @@ const Featured = ({products}) => {
       <Flash delay={4000}><h1>Featured</h1></Flash>
       <div className={classes.griddy}>
       
-      <Bounce bottom  duration={3000}>
+      <Bounce bottom  duration={1500}>
       {products.map((product) =>  <div className={classes.card} key={product.fields.title}>
           <div className={classes.imagediv}>
             {/* <Image src={product.fields.image} alt={product.fields.title} /> */}

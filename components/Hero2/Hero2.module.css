@@ -34,7 +34,7 @@
     .heropage{
         background-repeat: repeat;
         background-size:contain;
-        height:650px;
+        max-height:70vh;
         overflow: hidden;
     }
     .trans{

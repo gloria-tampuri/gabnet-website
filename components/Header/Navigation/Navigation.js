@@ -14,8 +14,6 @@ const Navigation = () => {
 
     const {mobileModal, showMobileModal} = mobileModalC
 
-    console.log(mobileModal);
-
 const {showExplore} = exploreModalContext
     return (
         <div className={classes.Navigation}>

@@ -19,10 +19,6 @@
 }
 
 .explorelist{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
-    grid-auto-flow: row dense; */
-    /* gap: 2rem; */
     column-count: 3;
     column-gap: 2rem;
     font-weight: 700;
@@ -41,10 +37,8 @@
     list-style: none;
     font-size: 0.7rem;
     font-weight: 400;
-    /* padding: 0.3rem; */
 }
 
 .mobilelist li{
     list-style:none;
-
 }

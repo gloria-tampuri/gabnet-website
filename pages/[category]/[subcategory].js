@@ -34,7 +34,7 @@ const SubCategoriesPage = () => {
     
       <div className={classes.griddy}>
       {products && products.map(product => <div key={product.sys.id}>
-        <Bounce bottom  duration={3000}>
+        <Bounce bottom  duration={1500}>
         <div  className={classes.card}>
         <div className={classes.imagediv}> <img src={product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
        <div className={classes.description}> 

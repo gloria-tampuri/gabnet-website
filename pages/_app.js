@@ -3,9 +3,11 @@ import { MobileModalContextProvider } from '../context/MobileModalContext'
 import { ModalContextProvider } from '../context/ModalContext'
 import '../styles/globals.css'
 import { SubcategoryContextProvider } from '../context/SubcategoryContext'
+import {ProductContextProvider} from '../context/ProductContext'
 
 function MyApp({ Component, pageProps }) {
   return (
+    < ProductContextProvider >
   <SubcategoryContextProvider> 
   <ModalContextProvider>
       <ExploreDropdownContextProvider>
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
       </ExploreDropdownContextProvider>
     </ModalContextProvider>    
   </SubcategoryContextProvider>
+ </ProductContextProvider> 
   )
 }
 

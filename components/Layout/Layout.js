@@ -13,8 +13,6 @@ const Layout = ({ children,products,categories }) => {
   const exploreModalContext = useContext(ModalContext)
   const { hideExplore } = exploreModalContext;
 
-  console.log(products)
-
   const mobileModalC = useContext(MobileModalContext)
   const {mobileModal} = mobileModalC
 

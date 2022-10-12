@@ -8,11 +8,10 @@ const Hero2 = () => {
     <div className={classes.heropage}>
         <div className={classes.trans}> 
         <h1> 
-<Typewriter
+<Typewriter 
 onInit={(typewriter) => {
   typewriter.typeString('All your Printing needs in one place!')
     .callFunction(() => {
-      console.log('String typed out!');
     })
     .start();
 }}     
@@ -23,3 +22,11 @@ onInit={(typewriter) => {
 }
 
 export default Hero2
+
+{/* <TypeWriterEffect
+startDelay={100}
+cursorColor="black"
+text="All your Printing needs in one place!"
+typeSpeed={100}
+scrollArea={myAppRef}
+/> */}
