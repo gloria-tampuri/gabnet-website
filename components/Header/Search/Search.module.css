@@ -1,0 +1,41 @@
+.Search{
+    width: 60%;
+    height: fit-content;
+    /* margin: auto 0; */
+    border: 1px solid #0C2850;
+    display: flex;
+   margin: 0 5rem 0 2rem;
+    align-items: center;
+    padding: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.Search input{
+    background-color: #FBB339 ;
+    color: rgb(36, 35, 35);
+    font-size: 1rem;
+    width: 90%;
+    height: 3rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+}
+
+.searchIcon{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 700px){
+
+.Search{
+    display: none;
+}
+
+}

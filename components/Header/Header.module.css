@@ -1,0 +1,22 @@
+.Header{
+background-color: var(--yellow-prime);
+
+}
+
+.headersize{
+    width: 90%;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--blue-prime);
+}
+
+@media (max-width: 730px){
+   .headersize{
+    width: 100%;
+    padding: 1rem;
+   }
+
+   }

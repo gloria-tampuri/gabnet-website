@@ -1,0 +1,59 @@
+.mobile{
+    position: fixed;
+    /* overflow-y: scroll; */
+    /* top:0;
+    left: 5%; */
+    width: 100%;
+    height: 100vh;
+    background-color:#0C2850;
+    color: white;
+    padding: 1rem;
+    overflow: auto;
+    z-index: 1;
+}
+
+
+.mheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.mlogo{
+    width: 6rem;
+}
+
+.AiOutlineClose{
+    font-size: 2rem;
+    color: #0C2850;
+}
+
+.mobilenav{
+    margin: 2rem 0;
+}
+
+.mobilenavlist{
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+.mobilenav hr{
+    color: white;
+}
+
+.explore{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.AiOutlineDown, .AiOutlineUp{
+    font-size: 1.2rem;
+    color: var( --yellow-prime);
+}
+

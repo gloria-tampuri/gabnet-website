@@ -1,0 +1,28 @@
+.Navigation nav ul{
+    display: flex;
+    gap: 3rem;
+}
+
+.Navigation nav ul li {
+   list-style: none;
+   cursor: pointer;
+}
+
+
+
+
+.menu{
+    font-size: 4rem;
+    color: var(--blue-prime);
+    display: none;
+}
+
+@media (max-width: 700px){
+    .Navigation nav{
+        display: none;
+    }
+
+    .menu{
+        display:block;
+    }
+}
