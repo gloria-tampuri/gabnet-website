@@ -7,6 +7,7 @@ import embro from '/public/embro.jpg'
 import gallery1 from '/public/pexels-field-engineer-442154.jpg'
 import gallery2 from '/public/pexels-pixabay-257736.jpg'
 import gallery3 from '/public/access/gallery 1.jpg'
+import Slide from 'react-reveal/Slide';
 // import brand1 from '/public/1.jpg'
 // import brand2 from '/public/2.jpg'
 // import brand3 from '/public/3-1.jpg'
@@ -26,6 +27,7 @@ const Services = () => {
         </div>
 
 
+        <Slide left delay={500}>
         <div className={classes.groupservices}>
             <div className={classes.servicecard}>
 
@@ -99,21 +101,24 @@ const Services = () => {
 
             </div>
         </div>
+        </Slide>
 
-        <div className={classes.servicegallery}>
+       <Slide right delay={2000}>
+       <div className={classes.servicegallery}>
             <h2>Service Gallery</h2>
 
             <div className={classes.gallery}>
 
                 <div>
-                    <Image src={gallery1}alt="engineer"/>
+                    <Image className={classes.galleryimg} src={gallery1}alt="engineer"/>
                 </div>
                 <div>
-                    <Image src={gallery2} alt="switches"/>
+                    <Image  className={classes.galleryimg} src={gallery2} alt="switches"/>
                 </div>
-                <div> <Image src={gallery3} alt="engineer"/></div>
+                <div> <Image  className={classes.galleryimg} src={gallery3} alt="engineer"/></div>
             </div>
         </div>
+       </Slide>
 
         {/* <div className={classes.ourbrands}>
             <h2>Our Brands</h2>

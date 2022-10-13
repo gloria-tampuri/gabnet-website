@@ -97,12 +97,12 @@ background-color: #0C2850;
 }
 
 .gallery div{
-   height:20rem;
+   height:17rem;
    border-radius: 15px;
    overflow: hidden;
 }
 
-.gallery div img{
+.galleryimg{
     height: 100%;
 }
 
@@ -116,7 +116,7 @@ background-color: #0C2850;
 }
 
 .ourbrands h2{
-    margin: 0 auto;
+    margin: 2rem auto;
     width: fit-content;
     background-image:linear-gradient(101.43deg, #FBB339 -10.26%, #0C2850 94.64%);
     color: white;

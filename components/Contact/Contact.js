@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Contact.module.css'
 import Layout from '../Layout/Layout'
 import Link from 'next/link'
+import Rotate from 'react-reveal/Rotate';
 import { MdEmail } from 'react-icons/md'
 import { IoIosCall } from 'react-icons/io'
 import { IoLocationSharp } from 'react-icons/io5'
@@ -20,7 +21,8 @@ const Contact = () => {
 
             <div className={classes.mainlayout}>
 
-                <div className={classes.ourcontact}>
+              <Rotate left>
+              <div className={classes.ourcontact}>
                     <h2>
                         Contact Information
                     </h2>
@@ -63,6 +65,7 @@ const Contact = () => {
                     <div className={classes.circle}>
                     </div>
                 </div>
+              </Rotate>
 
                 <div className={classes.yourcontact}>
                     <form action="" className={classes.form}>
