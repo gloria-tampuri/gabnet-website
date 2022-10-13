@@ -80,7 +80,7 @@ const ExploreList = () => {
 
         <div>
           <div className={classes.ExploreList}>
-            <p>INDUSTRIAL PRINTERS/ SPECIAL COMMERCIAL MACHINES</p> {openTI ? <span><IoIosClose className={classes.ExploreListSpan} onClick={() => setOpenPC(false)} />  </span> : <span><AiOutlinePlus className={classes.ExploreListSpan} onClick={() => setOpenPC(true)} /></span>}
+            <p>INDUSTRIAL PRINTERS/ SPECIAL COMMERCIAL MACHINES</p> {openPC ? <span><IoIosClose className={classes.ExploreListSpan} onClick={() => setOpenPC(false)} />  </span> : <span><AiOutlinePlus className={classes.ExploreListSpan} onClick={() => setOpenPC(true)} /></span>}
           </div>
           {openPC && <ListSubCategoryMobile className={classes.sublist} category="INDUSTRIAL PRINTERS/ SPECIAL COMMERCIAL MACHINES" />}
         </div>
