@@ -19,7 +19,7 @@ const ListSubCategory = ({category}) => {
         setIndividualCategory(products);
       }
       fetchProducts()
-    }, [])
+    }, [category])
 
 
     return (
@@ -27,8 +27,8 @@ const ListSubCategory = ({category}) => {
     <Fade>
        <ul>
       {individualCategory && individualCategory.map((subCategory) =>
-        <Link href={`/${slugify(category)}/${subCategory && slugify(subCategory)}`}><li className={classes.linkList} onClick={hideMobileModal} 
-          key={uuidv4()}>{subCategory}</li>
+        <Link  key={uuidv4()} href={`/${slugify(category)}/${subCategory && slugify(subCategory)}`}><li className={classes.linkList} onClick={hideMobileModal} 
+         >{subCategory}</li>
         </Link>)}
     </ul>
     </Fade>

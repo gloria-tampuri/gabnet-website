@@ -1,18 +1,17 @@
 import React from 'react'
 import classes from './Services.module.css'
-import Layout from '../Layout/Layout'
 import Image from 'next/image'
-import sellitems from '../../public/access/selling items.jpeg'
-import leasing from '../../public/access/leasing.jpg'
-import embro from '../../public/access/embro.jpg'
-import gallery1 from '../../public/access/pexels-field-engineer-442154.jpg'
-import gallery2 from '../../public/access/pexels-pixabay-257736.jpg'
-import gallery3 from '../../public/access/gallery 1.jpg'
-import brand1 from '../../public/access/brands/1.jpg'
-import brand2 from '../../public/access/brands/2.jpg'
-import brand3 from '../../public/access/brands/3-1.jpg'
-import brand4 from '../../public/access/brands/4.jpg'
-import brand5 from '../../public/access/brands/5.jpg'
+import sellitems from '/public/selling items.jpeg'
+import leasing from '/public/leasing.jpg'
+import embro from '/public/embro.jpg'
+import gallery1 from '/public/pexels-field-engineer-442154.jpg'
+import gallery2 from '/public/pexels-pixabay-257736.jpg'
+import gallery3 from '/public/access/gallery 1.jpg'
+// import brand1 from '/public/1.jpg'
+// import brand2 from '/public/2.jpg'
+// import brand3 from '/public/3-1.jpg'
+// import brand4 from '/public/4.jpg'
+// import brand5 from '/public/5.jpg'
 
 const Services = () => {
   return (
@@ -107,7 +106,7 @@ const Services = () => {
             <div className={classes.gallery}>
 
                 <div>
-                    <Image src={gallery1} alt="engineer"/>
+                    <Image src={gallery1}alt="engineer"/>
                 </div>
                 <div>
                     <Image src={gallery2} alt="switches"/>
@@ -116,7 +115,7 @@ const Services = () => {
             </div>
         </div>
 
-        <div className={classes.ourbrands}>
+        {/* <div className={classes.ourbrands}>
             <h2>Our Brands</h2>
             <div>
                 <div className="putincenter">
@@ -127,7 +126,7 @@ const Services = () => {
                     <Image src={brand5} alt="Xerox"/>
                 </div>
             </div>
-        </div>
+        </div> */}
         </>
   )
 }

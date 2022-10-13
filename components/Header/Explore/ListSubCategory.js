@@ -18,13 +18,13 @@ const ListSubCategory = ({ category}) => {
         setIndividualCategory(products);
       }
       fetchProducts()
-    }, [])
+    }, [category])
   
     return (
       <ul>
         {individualCategory && individualCategory.map((subCategory) =>
-          <Link href={`/${slugify(category)}/${subCategory && slugify(subCategory)}`}><li onClick={hideMobileModal} className={classes.subCategory}
-            key={uuidv4()}>{subCategory}</li>
+          <Link key={uuidv4()} href={`/${slugify(category)}/${subCategory && slugify(subCategory)}`}><li onClick={hideMobileModal} className={classes.subCategory}
+            >{subCategory}</li>
           </Link>)}
       </ul>
     )

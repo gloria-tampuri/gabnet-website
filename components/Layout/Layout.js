@@ -35,7 +35,7 @@ const Layout = ({ children,products,categories }) => {
     if (scrollPosition > 10) {
       hideExplore()
     }
-  }, [scrollPosition])
+  }, [scrollPosition,hideExplore])
 
   return (
     <div className={classes.layout} onClick={hideExplore}>

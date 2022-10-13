@@ -37,6 +37,14 @@
     list-style: none;
     font-size: 0.7rem;
     font-weight: 400;
+    margin: 0.5rem;
+}
+
+.subCategory:hover{
+    background-color: #203c63;
+    color: white;
+    width: fit-content;
+    padding: 0 0.3rem;
 }
 
 .mobilelist li{
