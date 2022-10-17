@@ -5,12 +5,14 @@ import { slugify, unSlugify } from '../../Helpers/slugify'
 import classes from '../../components/Category/CategoryPage.module.css'
 import Layout from '../../components/Layout/Layout'
 import Bounce from 'react-reveal/Bounce';
+import Head from 'next/head'
 
 
 const SubCategoriesPage = () => {
   const router = useRouter()
   const { category, subcategory } = router.query
   const [products,setProducts] = useState()
+  const [productTitle, setProductTitle] = useState()
 
   useEffect(() => {
 
@@ -24,9 +26,21 @@ const SubCategoriesPage = () => {
   }, [category, subcategory])
 
 
-  console.log(products);
+  useEffect(()=>{
+    const productTitles =products && products.map((product)=> product.fields.title).join()
+    setProductTitle(productTitles)
+  },[products])
+
 
   return (
+ <>
+ <Head>
+  <title> GABNET | {subcategory && subcategory.toUpperCase().replaceAll('-', ' ')} </title>
+ <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='description' content={productTitle && productTitle}/>
+ </Head>
   <Layout>
      <div className={classes.categoryPage}>
 
@@ -52,6 +66,7 @@ const SubCategoriesPage = () => {
     
     </div>
   </Layout>
+ </>
   )
 }
 
