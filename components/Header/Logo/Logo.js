@@ -8,7 +8,7 @@ const Logo = () => {
   return (
     <div className={classes.logoContainer}>
        <Link href='/'>
-        <a><Image src={logo}  alt='gabnet logo'  /> </a> 
+        <a><Image src={logo}  alt='gabnet logo'  /></a>
        </Link>
     </div>
   )

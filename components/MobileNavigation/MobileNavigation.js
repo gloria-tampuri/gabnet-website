@@ -48,7 +48,8 @@ const MobileNavigation = () => {
    <Fade left>
      <div className={classes.mobile}>
       <div className={classes.mheader}>
-        <div className={classes.mlogo}> <Link href='/'><a><Image src={logo} alt='gabnet logo' onClick={hideMobileModal} /> </a>
+        <div className={classes.mlogo}><Link href='/'>
+        <a><Image src={logo} alt='gabnet logo' onClick={hideMobileModal} /> </a>
         </Link></div>
         <AiOutlineClose className={classes.AiOutlineClose} onClick={closeAllNavs} />
 
@@ -60,9 +61,13 @@ const MobileNavigation = () => {
 
           {dropdown ? <ExploreList categories={categories}/> : ''}
           <hr />
-          <li onClick={hideMobileModal} className={classes.mobilenavlist}><a onClick={()=>router.push('/services')}>Services</a></li>
+          <li onClick={hideMobileModal} className={classes.mobilenavlist}>
+            <Link href='/services'><a>Services</a></Link>
+          </li>
           <hr />
-          <li onClick={hideMobileModal}  className={classes.mobilenavlist}><a onClick={()=>router.push('/contact')}>Contact</a></li>
+          <li onClick={hideMobileModal}  className={classes.mobilenavlist}>
+            <Link href='/contact'><a>Contact</a></Link>
+          </li>
           <hr />
         </ul>
       </nav>

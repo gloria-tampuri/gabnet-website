@@ -20,13 +20,13 @@ const {showExplore} = exploreModalContext
             <nav>
                 <ul>
                     <li onMouseOver={showExplore}> Explore</li>
-                    <li> <a onClick={()=>router.push('/services')}> Services</a></li>
-                    <li><a onClick={()=>router.push('/contact')}>Contact</a></li>
+                    <li><Link href='/services'><a>Services</a></Link></li>
+                    <li><Link href='/contact'><a>Contact</a></Link></li>
                 </ul>   
             </nav>
             <div><HiOutlineMenuAlt2  className={classes.menu} onClick={showMobileModal}/></div>
         </div>
     )
 }
-
+{/* <a onClick={()=>router.push('/contact')}>Contact</a> */}
 export default Navigation

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import classes from './Featured.module.css'
 import Bounce from 'react-reveal/Bounce';
 import Flash from 'react-reveal/Flash';
@@ -14,7 +15,7 @@ const Featured = ({products}) => {
       {products.map((product) =>  <div className={classes.card} key={product.fields.title}>
           <div className={classes.imagediv}>
             {/* <Image src={product.fields.image} alt={product.fields.title} /> */}
-            <img src={product.fields.image.fields.file.url} alt={product.fields.title}  />
+            <Image height='320' width='320' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title}  />
             </div>
             <div className={classes.description}>
               <h4>{product.fields.title}</h4>

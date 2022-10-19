@@ -6,6 +6,7 @@ import classes from '../../components/Category/CategoryPage.module.css'
 import Layout from '../../components/Layout/Layout'
 import Bounce from 'react-reveal/Bounce';
 import Head from 'next/head'
+import Image from 'next/image'
 
 
 const SubCategoriesPage = () => {
@@ -35,11 +36,13 @@ const SubCategoriesPage = () => {
   return (
  <>
  <Head>
-  <title> GABNET | {subcategory && subcategory.toUpperCase().replaceAll('-', ' ')} </title>
- <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> GABNET | {subcategory && String(subcategory.toUpperCase().replaceAll('-', ' '))} </title>
+ <meta  charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name='description' content={productTitle && productTitle}/>
+        <meta name='description' content={productTitle && String(productTitle)}/>
+        <meta property='og:title' content={`More items on ${subcategory}`}/>
+        <meta name='description' content={subcategory}/>
  </Head>
   <Layout>
      <div className={classes.categoryPage}>
@@ -50,7 +53,7 @@ const SubCategoriesPage = () => {
       {products && products.map(product => <div key={product.sys.id}>
         <Bounce bottom  duration={1500}>
         <div  className={classes.card}>
-        <div className={classes.imagediv}> <img src={product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
+        <div className={classes.imagediv}> <Image height='320' width='320' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title}  /> </div>
        <div className={classes.description}> 
        <h4>{product.fields.title}</h4> 
        <p>{product.fields.description}</p>
@@ -94,3 +97,5 @@ export default SubCategoriesPage
 //   // Pass products data to the page via props
 //   return { props: { products: productSubCategories } }
 // }
+
+//height={product.fields.image.fields.file.details.image.height} width={product.fields.image.fields.file.details.image.width}

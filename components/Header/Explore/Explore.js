@@ -11,7 +11,7 @@ const Explore = () => {
   // const [subCategories, setSubCategories] = useState()
    const productsData = useContext(ProductContext)
    const {products} =productsData
-console.log(products);
+
 
 
   useEffect(() => {

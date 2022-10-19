@@ -26,12 +26,7 @@ const ExploreList = () => {
 
   const [isopen, setIsopen] = useState(false)
 
-  // const toShowCategory = (category) => {
-  //   console.log(category);
-  //   // console.log(event.target);
-  //   setIsopen(true)
-  // }
-  // 
+
 
   return (
     <div>

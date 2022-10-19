@@ -7,14 +7,15 @@ import Layout from '../components/Layout/Layout'
 
 
 const services = ({categories}) => {
-console.log(categories);
+
   return (
    <>
    <Head>
     <title>GABNET | SERVICES</title>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta  charSet="UTF-8"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property='og:title' content={`More items on ${categories}`}/>
     <meta name="description" content='We are the authorized distributor for one of the biggest Printer and Photocopier machine companies in Germany. Since we purchase huge volumes with leading printer and copier manufacturers like Xerox, Canon, Hp, Konica Minolta, and Hewlett Packard, we receive huge discounts that allow us to offer exceptional pricing, We offer printer sales, printer leasing and also we repair and maintain printers, embroidery machines, screen printers. We sell heat transfer vinyl, screen printing consumables, cricut maker and accessories.'/>
    </Head>
     <Layout categories={categories}>

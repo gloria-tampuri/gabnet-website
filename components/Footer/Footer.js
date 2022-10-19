@@ -61,13 +61,13 @@ const Footer = () => {
              
               <li className={classes.socialfoot}>
                   <IoIosCall className={classes.socialicon}/>
-                  <Link href="tel:+233595850394"><a>+233595850394 / 0302243847</a></Link>
+                  <Link href="tel:+233595850394"><a href="tel:+233595850394">+233595850394 / 0302243847</a></Link>
                 </li>
               
 
                 <li className={classes.socialfoot}>
                   <IoIosCall className={classes.socialicon}/>
-                  <Link href="tel:+233508737663"><a> +233508737663 (Kumasi)</a></Link>
+                  <Link href="tel:+233508737663"><a href="tel:+233508737663"> +233508737663 (Kumasi)</a></Link>
                 </li>
 
                 {/* <li className={classes.socialfoot}>
@@ -81,11 +81,11 @@ const Footer = () => {
 
                  <li className={classes.socialfoot}>
                  <MdEmail className={classes.socialicon}/>
-                 <Link href='mailto:info@gabnetprinting.com'><a>info@gabnetprinting.com</a></Link>
+                 <Link href='mailto:info@gabnetprinting.com'><a href='mailto:info@gabnetprinting.com'>info@gabnetprinting.com</a></Link>
                  </li>
                  <li className={classes.socialfoot}>
                   <IoLocationSharp  className={classes.socialicon}/>
-                  <Link href="https://www.google.com/maps/place/House+Party+Computers/@5.5882174,-0.2098218,17z/data=!3m1!4b1!4m5!3m4!1s0xfdf9a38d31c2bd7:0x4c44cda630d1e91e!8m2!3d5.5882174!4d-0.2076331"><a> House Party Main Building, opposite Republic and NIB Banks <br/> New Town, Accra-Ghana. /      Almadiya Roundabout, Kumasi</a></Link>
+                  <Link href="https://www.google.com/maps/place/House+Party+Computers/@5.5882174,-0.2098218,17z/data=!3m1!4b1!4m5!3m4!1s0xfdf9a38d31c2bd7:0x4c44cda630d1e91e!8m2!3d5.5882174!4d-0.2076331"><a href="https://www.google.com/maps/place/House+Party+Computers/@5.5882174,-0.2098218,17z/data=!3m1!4b1!4m5!3m4!1s0xfdf9a38d31c2bd7:0x4c44cda630d1e91e!8m2!3d5.5882174!4d-0.2076331"> House Party Main Building, opposite Republic and NIB Banks <br/> New Town, Accra-Ghana. /      Almadiya Roundabout, Kumasi</a></Link>
                  </li>
                </ul>
             </div>

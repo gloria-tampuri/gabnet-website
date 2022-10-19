@@ -17,7 +17,7 @@ const {exploreModal } =exploreModalContext
     <div className={classes.Header}>
       <div className={classes.headersize}>
         <Logo />
-        <Search />
+        {/* <Search /> */}
         <Navigation/>
         { exploreModal && <Explore products={products} categories={categories}/>}
        
