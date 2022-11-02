@@ -9,15 +9,15 @@ import Navigation from './Navigation/Navigation'
 import Search from './Search/Search'
 
 
-const Header = ({products,categories}) => {
-  const exploreModalContext = useContext(ModalContext)
+const Header = ({products,categories,filteredProducts,onSearchResult}) => {
+const exploreModalContext = useContext(ModalContext)
 const {exploreModal } =exploreModalContext
 
   return (
-    <div className={classes.Header}>
+    <div className={classes.Header} filteredProducts={filteredProducts}>
       <div className={classes.headersize}>
         <Logo />
-        {/* <Search /> */}
+        <Search onSearchResult={onSearchResult}/>
         <Navigation/>
         { exploreModal && <Explore products={products} categories={categories}/>}
        

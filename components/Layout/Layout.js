@@ -5,23 +5,35 @@ import { ModalContext } from '../../context/ModalContext'
 import MobileNavigation from '../MobileNavigation/MobileNavigation'
 import classes from './Layout.module.css'
 import { MobileModalContext } from '../../context/MobileModalContext'
+import SearchOverlay from '../Header/Search/SearchOverlay'
+import { SearchContext } from '../../context/SearchContext'
 
 
 
 
-const Layout = ({ children,products,categories }) => {
+const Layout = ({ children,products,categories,  }) => {
+
+  const[searchResult, setSearchResult] =useState([])
+
+  const getSearchResult=(result)=>{
+    setSearchResult(result)
+  }
+
   const exploreModalContext = useContext(ModalContext)
   const { hideExplore } = exploreModalContext;
 
   const mobileModalC = useContext(MobileModalContext)
   const {mobileModal} = mobileModalC
 
+  const searchModalCtx = useContext(SearchContext)
+  const {showSearch, showSearchHandler} = searchModalCtx;
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.scrollY;
     setScrollPosition(position);
   };
-
+ 
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -40,8 +52,9 @@ const Layout = ({ children,products,categories }) => {
   return (
     <div className={classes.layout} onClick={hideExplore}>
       {mobileModal && <MobileNavigation/>}
-      <Header products={products} categories={categories} />
+      <Header products={products} categories={categories} onSearchResult ={getSearchResult} />
       <div>{children}</div>
+     {showSearch && <SearchOverlay searchResult={searchResult}/>}
       <Footer />
     </div>
   )

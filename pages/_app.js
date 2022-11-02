@@ -4,9 +4,11 @@ import { ModalContextProvider } from '../context/ModalContext'
 import '../styles/globals.css'
 import { SubcategoryContextProvider } from '../context/SubcategoryContext'
 import {ProductContextProvider} from '../context/ProductContext'
+import { SearchContextProvider } from '../context/SearchContext'
 
 function MyApp({ Component, pageProps }) {
   return (
+    <SearchContextProvider>
     < ProductContextProvider >
   <SubcategoryContextProvider> 
   <ModalContextProvider>
@@ -18,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     </ModalContextProvider>    
   </SubcategoryContextProvider>
  </ProductContextProvider> 
+ </SearchContextProvider>
   )
 }
 

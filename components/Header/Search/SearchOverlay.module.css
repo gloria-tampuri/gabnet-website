@@ -1,0 +1,23 @@
+.searchoverlay{
+    position: fixed;
+    width:46%;
+    height: fit-content;
+    background-color: white;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #0C2850;
+    padding: 2rem;
+    border-radius: 10px;
+    /* border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px ; */
+    top: 12%;
+    right: 27%;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.25);
+    z-index:5;
+}
+
+.searchlist ul li{
+list-style: none;
+margin: 0.5rem 0;
+text-decoration: underline;
+}

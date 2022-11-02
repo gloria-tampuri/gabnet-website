@@ -1,3 +1,8 @@
+.overallSearch{
+    display: flex;
+    flex-direction: column;
+}
+
 .Search{
     width: 60%;
     height: fit-content;
