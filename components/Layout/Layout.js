@@ -26,7 +26,7 @@ const Layout = ({ children,products,categories,  }) => {
   const {mobileModal} = mobileModalC
 
   const searchModalCtx = useContext(SearchContext)
-  const {showSearch, showSearchHandler} = searchModalCtx;
+  const {showSearch,hideSearchHandler} = searchModalCtx;
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -46,11 +46,17 @@ const Layout = ({ children,products,categories,  }) => {
   useEffect(() => {
     if (scrollPosition > 10) {
       hideExplore()
+      hideSearchHandler()
     }
   }, [scrollPosition,hideExplore])
 
+  const hideAllOverLays=()=>{
+    hideExplore()
+    hideSearchHandler()
+  }
+
   return (
-    <div className={classes.layout} onClick={hideExplore}>
+    <div className={classes.layout} onClick={hideAllOverLays}>
       {mobileModal && <MobileNavigation/>}
       <Header products={products} categories={categories} onSearchResult ={getSearchResult} />
       <div>{children}</div>
