@@ -50,7 +50,8 @@ const CategoryPage = () => {
                         {products && products.map(product => <div key={product.sys.id}>
                             <Bounce bottom duration={1500}>
                                 <div className={classes.card}>
-                                    <div className={classes.imagediv}> <Image src={'https' + product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
+                                    <div className={classes.imagediv}> 
+                                    <Image src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title} height='320' width='320'/> </div>
                                     <div className={classes.description}>
                                         <h4>{product.fields.title}</h4>
                                         <p>{product.fields.description}</p>

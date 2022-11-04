@@ -1,7 +1,6 @@
 .Header{
-background-color: var(--yellow-prime);
-
-}
+    background-color: var(--yellow-prime);
+    }
 
 .headersize{
     width: 90%;
@@ -13,10 +12,26 @@ background-color: var(--yellow-prime);
     color: var(--blue-prime);
 }
 
+.mobileHeader{
+    display: none;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--blue-prime);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
 @media (max-width: 730px){
    .headersize{
     width: 100%;
     padding: 1rem;
+    display: none;
+   }
+
+   .mobileHeader{
+    display:flex;
    }
 
    }

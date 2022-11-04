@@ -11,6 +11,15 @@ const {showSearchHandler, hideSearchHandler} =searchCtx;
   const inputRef = useRef('');
   const [productState, setProductState] =useState(null)
 
+  
+useEffect(()=>{
+  const fetchData=async()=>{
+    const products = await getProducts()
+    setProductState(products)}
+  
+    fetchData()
+  }, [])
+
 const inputHandler=()=>{
   const inputData = inputRef.current.value
 
@@ -20,22 +29,13 @@ const inputHandler=()=>{
 
     if(productState !== null){
       showSearchHandler();
-      const filteredProducts= productState.filter((product)=> product.fields.title.includes(inputData.toUpperCase()) ||  product.fields.title===(inputData.toUpperCase()) || product.fields.category ===(inputData.toUpperCase()) || product.fields.category.includes(inputData.toUpperCase()))
-      onSearchResult(filteredProducts)
+      const filteredproducts= productState.filter((product)=> product.fields.title.includes(inputData.toUpperCase()) ||  product.fields.title===(inputData.toUpperCase()) || product.fields.category ===(inputData.toUpperCase()) || product.fields.category.includes(inputData.toUpperCase()))
+      onSearchResult(filteredproducts)
     }else{
       return
     };
   
 }
-
-useEffect(()=>{
-const fetchData=async()=>{
-  const products = await getProducts()
-  setProductState(products)}
-
-  fetchData()
-}, [])
-
 
   return (
   
