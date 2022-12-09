@@ -4,6 +4,8 @@ import Layout from '../Layout/Layout'
 import Link from 'next/link'
 import Rotate from 'react-reveal/Rotate';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { MdEmail } from 'react-icons/md'
 import { IoIosCall } from 'react-icons/io'
 import { IoLocationSharp } from 'react-icons/io5'
@@ -13,8 +15,14 @@ import { TbBrandInstagram } from 'react-icons/tb'
 
 const Contact = () => {
     const form = useRef();
- const showEnv = process.env.NEXT_PUBLIC_SERVICE_ID
+
     // console.log(typeof`${showEnv}`);
+    const notify = () => toast.success("Great! Form has been submited",{
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+    });
 
     const[firstName, setFirstName]=useState('')
     const[lastName, setLastname]= useState('')
@@ -22,12 +30,16 @@ const Contact = () => {
     const[phone, setPhone] =useState('')
     const [message, setMessage]= useState('')
 
+    const[isLoading, setIsLoading]=useState(false)
+
     const onFormSubmit=(e)=>{
         e.preventDefault()
+        setIsLoading(true)
 
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID,process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
       .then((result) => {
-          console.log(result.text);
+        
+          result.text === "OK" && setIsLoading(false)
       }, (error) => {
           console.log(error.text);
       });
@@ -39,15 +51,17 @@ const Contact = () => {
             phone,
             message
         }
-        console.log(recievedMsg);
+       
 
         setEmail('')
         setFirstName('')
         setLastname('')
         setMessage('')
         setPhone('')
-    }
 
+        notify()
+    }
+  
     // const sendEmail = (e) => {
     //     e.preventDefault();
     //     const serviceId=process.env.SERVICE_ID
@@ -141,7 +155,7 @@ const Contact = () => {
                             <label htmlFor="message"> Message</label>
                             <textarea name="message" id="" cols="30" rows="10" value={message} onChange={(e)=>{setMessage(e.target.value)}}></textarea>
                         </div>
-                        <button className={classes.button}>Send Message</button>
+                        <button className={classes.button} disabled={isLoading}>{isLoading ? 'Send... ':'Send Message'}</button>
                     </form>
 
                     {/* <form ref={form} onSubmit={sendEmail}>
@@ -157,7 +171,7 @@ const Contact = () => {
                 </div>
 
             </div>
-
+            <ToastContainer />
         </Layout>
     )
 }
