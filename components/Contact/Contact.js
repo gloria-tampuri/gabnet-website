@@ -98,7 +98,7 @@ const Contact = () => {
 
                         <div className={classes.contactsection}>
                             <IoIosCall className={classes.socialicon} />
-                            <Link href="tel:+233508737663"><a href="tel:+233508737663">+233508737663 (Kumasi)</a></Link>
+                            <Link href="tel:+233241806223"><a href="tel:+233241806223">+233241806223 (Kumasi)</a></Link>
                         </div>
 
                         <div className={classes.contactsection}>

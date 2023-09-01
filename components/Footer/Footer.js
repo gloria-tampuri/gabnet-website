@@ -22,12 +22,18 @@ const Footer = () => {
             <div className={classes.rows}>
               <ul>
                 <h4>Abous Us</h4>
-                <li>Gabnet Enterprise is a subsidiary</li>
+                {/* <li>Gabnet Enterprise is a subsidiary</li>
                 <li> of House Party Computers.</li>
                 <li> We deal in the sale of quality</li>
                 <li>Embroidery Machines, Large Format </li>
                 <li> Printing Machines, New/Refurbished</li>
-                <li> printers/photocopiers</li>
+                <li> printers/photocopiers</li> */}
+                <li className={classes.aboutUs}>Gabnet Enterprise aims at providing our customers with VALUE FOR MONEY deals on   Printers, Copiers and consumables for their printing requirements. We stock a wide range of printing equipment such as Heat press, screen printing, digital embroidery, plasma, fiber laser, DTF printers, roll laminators, CO2 laser and many more.<br></br>
+ We adapt an honest and sincere approach to doing business with our customers and we are passionate about supporting small printing shops to grow with and make more profit. <br></br>
+Over the years we have supported small printing businesses to grow their sales and profit by providing them with technical support, appropriate equipment and bringing new technology to their door step at affordable prices. 
+We are based in Accra, with a branch in Kumasi in the Ashanti Region. 
+We have thousands of satisfied customers across Ghana including Small & medium printing businesses, Hotels and schools. 
+</li>
                 </ul>
 
             </div>
@@ -67,7 +73,7 @@ const Footer = () => {
 
                 <li className={classes.socialfoot}>
                   <IoIosCall className={classes.socialicon}/>
-                  <Link href="tel:+233508737663"><a href="tel:+233508737663"> +233508737663 (Kumasi)</a></Link>
+                  <Link href="tel:+233241806223"><a href="tel:+233241806223"> +233241806223 (Kumasi)</a></Link>
                 </li>
 
                 {/* <li className={classes.socialfoot}>

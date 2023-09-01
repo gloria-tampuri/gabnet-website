@@ -20,10 +20,12 @@ const Services = () => {
 
 <div className={classes.serviceheader}>
             <h2>Our Services</h2>
-            <p>We are the authorized distributor for one of the biggest Printer and Photocopier machine companies in
-                Germany. Since we purchase huge volumes with leading printer and copier manufacturers like Xerox, Canon,
-                Konica Minolta and Hewlett Packard, we receive huge discounts that allow us to offer exceptional
-                pricing.</p>
+            <p>
+Affordable printing machines, parts and consumables at competitive prices for our customers.<br></br>
+Technical support on our equipment and advice on the setting up of small and medium print service businesses. <br></br>
+Printer and equipment leasing services  
+ 
+</p>
         </div>
 
 
