@@ -101,7 +101,7 @@ We have thousands of satisfied customers across Ghana including Small & medium p
 
             <div className={classes.copyright}>
             <p>
-                copyright <AiOutlineCopyrightCircle/> 2022 GABNET Printing. All rights reserved</p>
+                copyright <AiOutlineCopyrightCircle/> 2023 GABNET Printing. All rights reserved</p>
         </div>
 
 
