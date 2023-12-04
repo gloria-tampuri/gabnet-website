@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Fade from 'react-reveal/Fade';
 import classes from './MobileNavigation.module.css'
 import Image from 'next/image'
-import logo from '../../public/access/gabnet Logo.png'
 import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import Link from 'next/link'
 import { MobileModalContext } from '../../context/MobileModalContext'
@@ -49,7 +48,7 @@ const MobileNavigation = () => {
      <div className={classes.mobile}>
       <div className={classes.mheader}>
         <div className={classes.mlogo}><Link href='/'>
-        <a><Image src={logo} alt='gabnet logo' onClick={hideMobileModal} /> </a>
+            <Image src={'/gabnet-Logo.png'} alt='gabnet logo' onClick={hideMobileModal} />
         </Link></div>
         <AiOutlineClose className={classes.AiOutlineClose} onClick={closeAllNavs} />
 
@@ -62,11 +61,11 @@ const MobileNavigation = () => {
           {dropdown ? <ExploreList categories={categories}/> : ''}
           <hr />
           <li onClick={hideMobileModal} className={classes.mobilenavlist}>
-            <Link href='/services'><a>Services</a></Link>
+              <Link href='/services'>Services</Link>
           </li>
           <hr />
           <li onClick={hideMobileModal}  className={classes.mobilenavlist}>
-            <Link href='/contact'><a>Contact</a></Link>
+              <Link href='/contact'>Contact</Link>
           </li>
           <hr />
         </ul>

@@ -1,6 +1,8 @@
 .logoContainer{
-width: 20rem;
-
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 730px){

@@ -30,7 +30,7 @@ const SearchOverlay = ({searchResult}) => {
       <div className={classes.searchoverlay} onClick={hideSearchHandler} >
       <div className={classes.searchlist}>
         <ul>
-         {uniqueCategories.map((subCategory,index)=><li key={index}><Link href={`/${slugify(getUniqueCategory(subCategory)[0])}/${subCategory && slugify(subCategory)}`}><a>{subCategory}</a></Link></li>)}
+            {uniqueCategories.map((subCategory, index) => <li key={index}><Link href={`/${slugify(getUniqueCategory(subCategory)[0])}/${subCategory && slugify(subCategory)}`}>{subCategory}</Link></li>)}
         </ul>
       </div>
 

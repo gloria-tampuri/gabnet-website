@@ -22,7 +22,7 @@ const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
     <div className={classes.Header} filteredproducts={filteredproducts}>
       <div className={classes.headersize}>
         <Logo />
-        <Search onSearchResult={onSearchResult} />
+        {/* <Search onSearchResult={onSearchResult} /> */}
         <Navigation />
         {exploreModal && <Explore products={products} categories={categories} />}
       </div>

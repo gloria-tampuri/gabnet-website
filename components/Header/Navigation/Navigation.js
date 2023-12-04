@@ -20,8 +20,8 @@ const {showExplore} = exploreModalContext
             <nav>
                 <ul>
                     <li onMouseOver={showExplore}> Explore</li>
-                    <li><Link href='/services'><a>Services</a></Link></li>
-                    <li><Link href='/contact'><a>Contact</a></Link></li>
+                    <li><Link href='/services'>Services</Link></li>
+                    <li><Link href='/contact'>Contact</Link></li>
                 </ul>   
             </nav>
             <div><HiOutlineMenuAlt2  className={classes.menu} onClick={showMobileModal}/></div>

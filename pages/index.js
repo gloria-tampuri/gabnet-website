@@ -6,9 +6,6 @@ import Featured from '../components/Featured/Featured'
 import CarouselPage from '../components/Carousel/CarouselPage'
 
 
-
-
-
 const Index = (props) => {
   const { products } = props
   const { featuredProducts, productCategories, allProducts } = products

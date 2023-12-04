@@ -1,5 +1,5 @@
 .footer{
-    background-color: #0C2850;
+    background-color: var(--gabnet-main);
     color: white;
     padding: 2rem;
     margin-top: 10rem;

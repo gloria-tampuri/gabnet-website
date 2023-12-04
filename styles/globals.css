@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap');
 
 *{
-  --yellow-prime:  #FBB339 ;
-  --blue-prime:#0C2850;
+  --gabnet-main: #FBB339;
+    --white-prime: #FEFEFE;
+    --gabnet-main: #10B4F0;
+    --gabnet-clear: #9CE0F9;
+    --gabnet-dark: #202020;
+    --blue-prime: #0C2850;
+    --gradient: linear-gradient(125deg, #9CE0F9, #00AFEF, #202020);
+    --gradient-2: linear-gradient(0.75turn, #9CE0F9, #00AFEF);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
