@@ -1,16 +1,18 @@
 .Header{
     background-color: var(--white-prime);
+
     }
 
 .headersize{
-    width: 90%;
-    padding: clamp(1rem, 3vh + 1rem, 1.8rem);
+    /* width: 90%; */
+        /* padding: clamp(1rem, 3vh + 1rem, 1.8rem) 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     color: var(--blue-prime);
+    position: relative;
 }
 
 .mobileHeader{

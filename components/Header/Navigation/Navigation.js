@@ -16,16 +16,20 @@ const Navigation = () => {
 
 const {showExplore} = exploreModalContext
     return (
-        <div className={classes.Navigation}>
-            <nav>
-                <ul>
-                    <li onMouseOver={showExplore}> Explore</li>
-                    <li><Link href='/services'>Services</Link></li>
-                    <li><Link href='/contact'>Contact</Link></li>
-                </ul>   
-            </nav>
-            <div><HiOutlineMenuAlt2  className={classes.menu} onClick={showMobileModal}/></div>
-        </div>
+        <section className={classes.float}>
+            <div className={classes.Navigation}>
+                <nav>
+                    <ul>
+                        <li onMouseOver={showExplore}> Explore</li>
+                        <li><Link href='/services'>Services</Link></li>
+                        <li><Link href='/contact'>Contact</Link></li>
+                        <li><Link href='/contact'>Gallery</Link></li>
+                        <li><Link href='/contact'>About</Link></li>
+                    </ul>
+                </nav>
+                <div><HiOutlineMenuAlt2 className={classes.menu} onClick={showMobileModal} /></div>
+            </div>
+        </section>
     )
 }
 {/* <a onClick={()=>router.push('/contact')}>Contact</a> */}

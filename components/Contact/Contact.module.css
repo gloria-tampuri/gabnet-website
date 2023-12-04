@@ -10,12 +10,12 @@
 }
 
 .topic h1{
-    color:var( --blue-prime);
+    color: var(--gabnet-secondary);
 }
 
 .topic p{
     padding: 1rem 0;
-    color: rgb(131, 128, 128);
+    color: var(--gabnet-dark);
 }
 
 .mainlayout{
@@ -27,7 +27,7 @@
     border-radius: 15px;
 }
 .ourcontact{
-    background-color: #0C2850;
+    background-color: var(--gabnet-secondary);
     color: white;
     padding: 2rem;
     width: 40%;
@@ -67,7 +67,7 @@
 }
 
 .contactsection a:hover{
-    color: #FBB339
+    color: var(--blue-prime)
 }
 
 .socials{
@@ -165,18 +165,19 @@
 .button{
     grid-column: 2/-1;
     padding: 0.5rem 1rem;
-    background-color: var(--blue-prime);
+    background-color: var(--gabnet-main);
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     color: white;
     bottom: 5%;
     right: 0;
+    cursor: pointer;
    
  }
 
  .button:hover{
-    background-color: #133058;
+    background-color: var(--gabnet-secondary);
     } 
 
 
