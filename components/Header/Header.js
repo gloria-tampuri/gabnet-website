@@ -20,7 +20,6 @@ const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
         {exploreModal && <Explore products={products} categories={categories} />}
       </div>
       <Navigation />
-
       <MobileHeader onSearchResult={onSearchResult} />
     </div>
   )

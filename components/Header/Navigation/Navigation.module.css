@@ -1,10 +1,10 @@
 .Navigation {
-    background: var(--gabnet-main);
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--gabnet-main);
 
 }
 .Navigation nav ul{
@@ -14,7 +14,7 @@
 
 .Navigation nav ul li {
    list-style: none;
-font-size: clamp(1rem, 2vw + 1rem, 2rem);
+font-size: clamp(0.5rem, 2vw + 1rem, 1.5rem);
     color: var(--white-prime);
     font-weight: bolder;
    cursor: pointer;
@@ -32,8 +32,8 @@ padding: 1rem 0;
     display: none;
 }
 
-@media (max-width: 700px){
-    .Navigation nav{
+@media (max-width: 780px){
+    .Navigation{
         display: none;
     }
 

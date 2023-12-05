@@ -1,7 +1,6 @@
 .Header{
-    background-color: var(--gabnet-main);
-  
-    }
+    /* background-color: var(--gabnet-main); */
+}
 
 .mobileHeader{
     display: none;
@@ -13,14 +12,15 @@
 }
 
 .menu{
-    color: #0C2850;
-    
+    color: var(--gabnet-main);
+    cursor: pointer;
 }
-
+.menu:hover{
+    color: var(--gabnet-secondary)
+}
 .searchIcon{
     font-size: 2rem;
     color: #0C2850;
-    
 }
 
 .overallSearch{
@@ -56,7 +56,7 @@
 }
 
 
-@media (max-width: 730px){
+@media (max-width: 780px){
     .headersize{
      width: 100%;
      padding: 1rem;

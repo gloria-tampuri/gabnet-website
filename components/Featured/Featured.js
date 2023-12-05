@@ -1,14 +1,13 @@
+"use client"
 import React from 'react'
 import Image from 'next/image';
 import classes from './Featured.module.css'
 import Bounce from 'react-reveal/Bounce';
 import Flash from 'react-reveal/Flash';
 import Link from 'next/link';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import { useFloating } from '@floating-ui/react';
 
 const Featured = ({products}) => {
-
   return (
     <div className={classes.Featured}>
       <h1 className={classes.Title}>Popular Machines</h1>
@@ -36,11 +35,7 @@ const Featured = ({products}) => {
             <div className={classes.description}>
               <h4>{product.fields.title}</h4>
               <p>{product.fields.description}</p>
-              <Tippy
-                duration={300}
-                content={<span>+233595850394</span>}>
                 <Link className={classes.Button} href={'tel:+233595850394'}>Call now</Link>
-              </Tippy>
             </div>
           </div>)}
       </Bounce>

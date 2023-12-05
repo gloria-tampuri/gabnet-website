@@ -100,7 +100,14 @@
 .Button:hover{
     background: var(--gabnet-clear);
 }
-.callNow {
+.Tooltip{
+    background:var(--gabnet-secondary);
+    color:var(--white-prime);
+    padding: 0.4rem;
+    border-radius: var(--border-radius-curve);
+}
+
+/* .callNow {
     position: absolute;
     width: fit-content;
     color: var(--white-prime);
@@ -115,13 +122,13 @@
 .callNow p a {
     color: var(--white-prime);
     text-decoration: none;
-}
+} */
 
-.callNow:hover {
+/* .callNow:hover {
     background-color: var(--gabnet-clear);
     color: var(--white-prime);
     cursor: pointer;
-}
+} */
 
 @media (max-width: 780px) {
     .griddy,.Title {

@@ -4,11 +4,16 @@ display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 1rem;
+ flex: 1;
+}
+
+.logoContainer img{
+    width: auto;
 }
 
 @media (max-width: 730px){
-    .logoContainer{
-        width: 10rem;
+.logoContainer img {
+        height:clamp(6rem, 10vw + 1rem, 10rem);
     }
 }
 

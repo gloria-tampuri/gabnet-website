@@ -1,6 +1,5 @@
 .Header{
     background-color: var(--white-prime);
-
     }
 
 .headersize{
@@ -26,13 +25,13 @@
 
 
 
-@media (max-width: 730px){
+@media (max-width: 780px){
    .headersize{
     width: 100%;
     padding: 1rem;
     display: none;
    }
-
+  
    .mobileHeader{
     display:flex;
    }
