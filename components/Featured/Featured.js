@@ -3,32 +3,46 @@ import Image from 'next/image';
 import classes from './Featured.module.css'
 import Bounce from 'react-reveal/Bounce';
 import Flash from 'react-reveal/Flash';
+import Link from 'next/link';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Featured = ({products}) => {
 
   return (
     <div className={classes.Featured}>
-      <Flash delay={4000}><h1>Featured</h1></Flash>
+      <h1 className={classes.Title}>Popular Machines</h1>
       <div className={classes.griddy}>
       
       <Bounce bottom  duration={1500}>
-      {products.map((product) =>  <div className={classes.card} key={product.fields.title}>
+          {/*{products.map((product) =>  <div className={classes.card} key={product.fields.title}>
           <div className={classes.imagediv}>
-            {/* <Image src={product.fields.image} alt={product.fields.title} /> */}
             <Image height='320' width='320' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title}  />
             </div>
             <div className={classes.description}>
               <h4>{product.fields.title}</h4>
               <p>{product.fields.description}</p>
             </div>
-        
+
           <div className={classes.callNow}>
               <p> <a href="tel:+233595850394">Call now</a>
               </p>
             </div>
-         
-          
-        </div>)}
+        </div>)}*/}
+
+          {products.map((product) => <div key={product.fields.title} className={classes.FeaturedProduct}>
+            <div className={classes.Image}>
+              <Image height='400' width='450' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title} /></div>
+            <div className={classes.description}>
+              <h4>{product.fields.title}</h4>
+              <p>{product.fields.description}</p>
+              <Tippy
+                duration={300}
+                content={<span>+233595850394</span>}>
+                <Link className={classes.Button} href={'tel:+233595850394'}>Call now</Link>
+              </Tippy>
+            </div>
+          </div>)}
       </Bounce>
      
 
