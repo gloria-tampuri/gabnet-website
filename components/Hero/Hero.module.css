@@ -1,7 +1,7 @@
 .heropage{
     width: 100%;
     height:650px;
-    background-image: linear-gradient(60deg,#0c2850d3, #031733c0), url('/access/heroImage.png');
+    background-image: url('/access/heroImage.png');
     background-position: center;
     background-size:contain;
     background-repeat: no-repeat;

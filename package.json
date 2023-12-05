@@ -9,23 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "contentful": "^9.2.4",
-    "framer-motion": "^10.16.12",
+    "@emailjs/browser": "^3.11.0",
+    "contentful": "^9.3.5",
+    "framer-motion": "^10.16.14",
     "next": "^14.0.3",
-    "nuka-carousel": "^5.4.0",
+    "nuka-carousel": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.12.0",
     "react-reveal": "^1.2.2",
-    "react-toastify": "^9.1.1",
+    "react-toastify": "^9.1.3",
     "react-typewriter-effect": "^1.1.0",
-    "styled-components": "^5.3.6",
-    "typewriter-effect": "^2.19.0",
-    "uuid": "^9.0.0"
+    "styled-components": "^6.1.1",
+    "swiper": "^11.0.5",
+    "typewriter-effect": "^2.21.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "eslint": "8.23.1",
+    "eslint": "8.55.0",
     "eslint-config-next": "^14.0.3"
   }
 }

@@ -15,7 +15,7 @@ const Hero = () => {
 
     <div className={classes.heropage} onClick={hideExplore}>
 
-      <div className={classes.words}>
+      {/* <div className={classes.words}>
         <LightSpeed right>
           <h1>
             Providing Solutions to all your Printing needs!
@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
 
         <Link href='/contact'>CONTACT US</Link>
-      </div>
+      </div> */}
 
     </div>
 

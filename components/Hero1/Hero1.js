@@ -8,7 +8,7 @@ const Hero1 = () => {
   return (
     <div className={classes.heropage}>
     
-    <div className={classes.words}>
+      {/* <div className={classes.words}>
         <h1>Providing Excellent Printers for Offices and Businesses</h1>
         <p>A Variety of printers and brands for you to choose from. We make your businesses easier and better</p>
 
@@ -16,7 +16,7 @@ const Hero1 = () => {
     </div>
      <div className={classes.mages}>
         <Image src={groupPrinters} alt='groupPrinters'/>
-     </div>
+     </div> */}
 
     </div>
   )

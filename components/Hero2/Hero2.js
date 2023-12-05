@@ -6,17 +6,17 @@ import Typewriter from 'typewriter-effect';
 const Hero2 = () => {
   return (
     <div className={classes.heropage}>
-        <div className={classes.trans}> 
-        <h1> 
-<Typewriter 
+      {/* <div className={classes.trans}>
+        <h1>
+<Typewriter
 onInit={(typewriter) => {
   typewriter.typeString('All your Printing needs in one place!')
     .callFunction(() => {
     })
     .start();
-}}     
+}}
 /></h1>
-        </div>
+        </div> */}
     </div>
   )
 }
