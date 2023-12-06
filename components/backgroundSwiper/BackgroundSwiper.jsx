@@ -65,7 +65,7 @@ export default function BackgroundSwiper() {
           centeredSlides={true}
           autoplay={{
             delay: 1000,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,

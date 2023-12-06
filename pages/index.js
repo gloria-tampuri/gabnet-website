@@ -4,6 +4,9 @@ import { createClient } from 'contentful'
 import Layout from '../components/Layout/Layout'
 import Featured from '../components/Featured/Featured'
 import BackgroundSwiper from '../components/backgroundSwiper/BackgroundSwiper'
+import ServicesOffer from '../components/LandingPage/servicesOffer/ServicesOffer'
+import Partner from '../components/LandingPage/partners/Partner'
+import Category from '../components/LandingPage/category/Category'
 
 
 const Index = (props) => {
@@ -23,6 +26,9 @@ const Index = (props) => {
       <Layout products={allProducts}>
         <BackgroundSwiper />
         <Featured products={featuredProducts} />
+        <Category />
+        <ServicesOffer />
+        {/* <Partner /> */}
       </Layout>
     </>
 

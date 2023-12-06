@@ -23,7 +23,7 @@ padding: 1rem 0;
 }
 
 .Navigation nav ul li:hover {
-    border-bottom: 5px solid var(--gabnet-secondary);
+    border-bottom: 5px solid var(--gabnet-yellow);
 }
 
 .menu{
