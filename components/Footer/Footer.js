@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Jump from 'react-reveal/Jump';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <section>
       <div className={classes.footer}>
@@ -35,7 +36,6 @@ const Footer = () => {
                 We have thousands of satisfied customers across Ghana including Small & medium printing businesses, Hotels and schools.
               </li>
             </ul>
-
           </div>
 
           <div className={classes.rows}>
@@ -101,7 +101,7 @@ const Footer = () => {
 
         <div className={classes.copyright}>
           <p>
-            copyright <AiOutlineCopyrightCircle /> 2023 GABNET Printing. All rights reserved</p>
+            copyright <AiOutlineCopyrightCircle /> {`${currentYear}`} GABNET Printing. All rights reserved</p>
         </div>
 
 

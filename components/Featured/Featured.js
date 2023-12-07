@@ -47,7 +47,8 @@ const Featured = ({products}) => {
         {products.map((product) => <SwiperSlide className={classes.Swiper} key={product.fields.title}>
           <div className={classes.FeaturedProduct}>
             <div className={classes.Image}>
-              <Image height='400' width='450' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title} /></div>
+              <Image height='400' width='450' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title} />
+            </div>
             <div className={classes.description}>
               <h4>{product.fields.title}</h4>
               <p>{product.fields.description}</p>

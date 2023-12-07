@@ -18,7 +18,11 @@ export default function ServicesOffer() {
       <div className={classes.ServiceWrapper}>
         <section ref={targetRef} className={classes.ServiceSection}>
           <div className={classes.ServiceContainer}>
-            <motion.div style={{ x }} className={classes.ServiceContent}>
+            <motion.div
+              transition={{ type: 'spring', mass: 10000, stiffness: 1 }}
+              style={{ x }}
+              className={classes.ServiceContent}
+            >
               {SERVICES.map((service) => (
                 <div className={classes.ServiceItem} key={service.id}>
                   <div className={classes.Image}></div>
