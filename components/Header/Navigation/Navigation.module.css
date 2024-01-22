@@ -1,3 +1,12 @@
+.Navigation {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gabnet-main);
+
+}
 .Navigation nav ul{
     display: flex;
     gap: 3rem;
@@ -5,11 +14,17 @@
 
 .Navigation nav ul li {
    list-style: none;
+font-size: clamp(0.5rem, 2vw + 1rem, 1.5rem);
+    color: var(--white-prime);
+    font-weight: bolder;
    cursor: pointer;
+padding: 1rem 0;
+    border-bottom: 5px solid transparent;
 }
 
-
-
+.Navigation nav ul li:hover {
+    border-bottom: 5px solid var(--gabnet-yellow);
+}
 
 .menu{
     font-size: 4rem;
@@ -17,8 +32,8 @@
     display: none;
 }
 
-@media (max-width: 700px){
-    .Navigation nav{
+@media (max-width: 780px){
+    .Navigation{
         display: none;
     }
 

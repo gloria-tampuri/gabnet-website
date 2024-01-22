@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap');
 
 *{
-  --gabnet-main: #FBB339;
+  --gabnet-yellow: #FBB339;
     --white-prime: #FEFEFE;
     --gabnet-main: #10B4F0;
+    --gabnet-secondary: #028bbd;
     --gabnet-clear: #9CE0F9;
     --gabnet-dark: #202020;
     --blue-prime: #0C2850;
     --gradient: linear-gradient(125deg, #9CE0F9, #00AFEF, #202020);
     --gradient-2: linear-gradient(0.75turn, #9CE0F9, #00AFEF);
+    --border-radius-curve: 0.4rem;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 html,
 body {
+  background: #e3f6fd;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-family: 'Open Sans', sans-serif; 
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--white-prime);
+}
+
+body::-webkit-scrollbar {
+  width: 1vw;
+  background-color: var(--white-prime);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--gabnet-main);
+  border-radius: 0.8rem;
 }
 
 a {

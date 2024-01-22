@@ -8,9 +8,6 @@ import { MobileModalContext } from '../../context/MobileModalContext'
 import SearchOverlay from '../Header/Search/SearchOverlay'
 import { SearchContext } from '../../context/SearchContext'
 
-
-
-
 const Layout = ({ children,products,categories,  }) => {
 
   const[searchResult, setSearchResult] =useState([])
@@ -48,7 +45,7 @@ const Layout = ({ children,products,categories,  }) => {
       hideExplore()
       hideSearchHandler()
     }
-  }, [scrollPosition,hideExplore])
+  }, [scrollPosition, hideExplore, hideSearchHandler])
 
   const hideAllOverLays=()=>{
     hideExplore()

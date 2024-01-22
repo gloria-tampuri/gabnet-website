@@ -3,7 +3,10 @@ import Head from 'next/head'
 import { createClient } from 'contentful'
 import Layout from '../components/Layout/Layout'
 import Featured from '../components/Featured/Featured'
-import CarouselPage from '../components/Carousel/CarouselPage'
+import BackgroundSwiper from '../components/backgroundSwiper/BackgroundSwiper'
+import ServicesOffer from '../components/LandingPage/servicesOffer/ServicesOffer'
+import Partner from '../components/LandingPage/partners/Partner'
+import Category from '../components/LandingPage/category/Category'
 
 
 const Index = (props) => {
@@ -21,8 +24,11 @@ const Index = (props) => {
         <meta name="description" content='Gabnet is a walk-in and online store that sells a variety of printing machines from screen printing machines, sublimation, and heat transfer machines, new and refurbished printers, printer spare parts, printing finishing machines, heavy-duty printing machines, toners and inks for printers, embroidery machines, industrial printers, and special commercial printing machines.' />
       </Head>
       <Layout products={allProducts}>
-        <CarouselPage />
+        <BackgroundSwiper />
         <Featured products={featuredProducts} />
+        <Category />
+        <ServicesOffer />
+        {/* <Partner /> */}
       </Layout>
     </>
 

@@ -51,13 +51,13 @@ const MobileHeader = ({onSearchResult}) => {
     
 
   return (
-    <div className={classes.Header  }>
+    <div className={classes.Header }>
           <div className={classes.mobileHeader}>
             <HiOutlineMenuAlt2 className={classes.menu} onClick={showMobileModal} />
            {searchOnSmallScreen ? <div className={classes.Search}>
               <input type='search' placeholder='Search products, brands and categories' ref={inputRef} onChange={inputHandler} />
             </div>: <Logo />}
-            <ImSearch className={classes.searchIcon} onClick={onToggleSearchHandler} />
+           {/* <ImSearch className={classes.searchIcon} onClick={onToggleSearchHandler} />*/}
       </div>
     </div>
   )

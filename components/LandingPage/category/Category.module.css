@@ -1,0 +1,15 @@
+.Category {
+    height: 80svh;
+    padding: 5rem 0;
+}
+
+.Title {
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 0.4rem 1rem;
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+    text-align: center;
+    background: var(--gradient);
+    background-clip: text;
+    color: transparent;
+}

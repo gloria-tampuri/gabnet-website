@@ -48,8 +48,9 @@ const MobileNavigation = () => {
      <div className={classes.mobile}>
       <div className={classes.mheader}>
         <div className={classes.mlogo}><Link href='/'>
-            <Image src={'/gabnet-Logo.png'} alt='gabnet logo' onClick={hideMobileModal} />
-        </Link></div>
+            <Image src={'/gabnet-Logo.png'} alt='gabnet logo' height={80} width={150} onClick={hideMobileModal} />
+          </Link>
+          </div>
         <AiOutlineClose className={classes.AiOutlineClose} onClick={closeAllNavs} />
 
       </div>
@@ -67,6 +68,14 @@ const MobileNavigation = () => {
           <li onClick={hideMobileModal}  className={classes.mobilenavlist}>
               <Link href='/contact'>Contact</Link>
           </li>
+            <hr />
+            <li onClick={hideMobileModal} className={classes.mobilenavlist}>
+              <Link href='/gallery'>Gallery</Link>
+            </li>
+            <hr />
+            <li onClick={hideMobileModal} className={classes.mobilenavlist}>
+              <Link href='/about'>About</Link>
+            </li>
           <hr />
         </ul>
       </nav>

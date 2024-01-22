@@ -1,0 +1,6 @@
+.Partners {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--gabnet-clear);
+    height: 40vh;
+    padding: 5rem 0;
+}

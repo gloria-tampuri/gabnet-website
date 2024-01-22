@@ -3,12 +3,20 @@ display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 1rem;
+ flex: 1;
 }
 
-@media (max-width: 730px){
-    .logoContainer{
-        width: 10rem;
+.logoContainer img{
+    height: 4rem;
+    width: auto;
+}
+
+@media (min-width: 730px) {
+.logoContainer img {
+        height: clamp(10rem, 10vw + 1rem, 13rem);
     }
 }
+
 
 
