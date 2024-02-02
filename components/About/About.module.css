@@ -1,0 +1,45 @@
+.About {
+    width: 100%;
+}
+
+.AboutBanner {
+    max-width: 1050px;
+    width: 100%;
+    margin: 5vmin auto;
+    padding: 0 3rem;
+    cursor: pointer;
+}
+
+.AboutBanner img {
+    border-radius: 3vmin;
+    object-fit: cover;
+    width: 100%;
+}
+
+.AboutContent {
+    max-width: 1050px;
+    width: 100%;
+    margin: 5vmin auto;
+    padding: 0 3vmin;
+}
+
+.AboutContent article {
+    line-height: 1.8;
+}
+
+.AboutContent article p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gabnet-main)
+}
+
+@media (width <=780px) {
+    .AboutBanner {
+        padding: 0 1rem;
+    }
+
+    .AboutBanner img {
+        border-radius: 1rem;
+        height: 50vmin;
+    }
+}

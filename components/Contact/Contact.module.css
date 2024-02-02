@@ -25,6 +25,7 @@
     /* height: 50vh; */
     box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    margin-bottom: 5vh;
 }
 .ourcontact{
     background-color: var(--gabnet-secondary);

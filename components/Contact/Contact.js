@@ -83,7 +83,6 @@ const Contact = () => {
             </div>
 
             <div className={classes.mainlayout}>
-
                 <Rotate left>
                     <div className={classes.ourcontact}>
                         <h2>

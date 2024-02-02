@@ -24,7 +24,7 @@ const {showExplore} = exploreModalContext
                         <li><Link href='/services'>Services</Link></li>
                         <li><Link href='/contact'>Contact</Link></li>
                         <li><Link href='/contact'>Gallery</Link></li>
-                        <li><Link href='/contact'>About</Link></li>
+                        <li><Link href='/about'>About</Link></li>
                     </ul>
                 </nav>
                 <div><HiOutlineMenuAlt2 className={classes.menu} onClick={showMobileModal} /></div>
