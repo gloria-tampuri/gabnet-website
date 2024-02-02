@@ -22,19 +22,19 @@ import styles from './BackgroundSwiper.module.css';
 const SLIDER_DATA = [
   {
     id: 1,
-    content: 'Reliable Sea Freight Services Cargo services with a global reach',
+    content: '',
     bg_url: '/images/slider-1.webp',
   },
-  // {
-  //   id: 2,
-  //   content: 'Streamlined air freight services secure and reliable deliveries',
-  //   bg_url: '/images/slider-1.webp',
-  // },
-  // {
-  //   id: 3,
-  //   content: 'Extensive links for safe and secure transportation of goods',
-  //   bg_url: '/images/slider-1.webp',
-  // }
+  {
+    id: 2,
+    content: '',
+    bg_url: '/images/slider-1.webp',
+  },
+  {
+    id: 3,
+    content: '',
+    bg_url: '/images/slider-1.webp',
+  }
 ];
 
 export default function BackgroundSwiper() {
