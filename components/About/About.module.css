@@ -28,7 +28,7 @@
 }
 
 .AboutContent article p::first-letter {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3vmin, 2rem);
     font-weight: bold;
     color: var(--gabnet-main)
 }
