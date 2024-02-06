@@ -28,12 +28,7 @@ const SLIDER_DATA = [
   {
     id: 2,
     content: '',
-    bg_url: '/images/slider-1.webp',
-  },
-  {
-    id: 3,
-    content: '',
-    bg_url: '/images/slider-1.webp',
+    bg_url: '/images/slider-2.webp',
   }
 ];
 
