@@ -1,0 +1,9 @@
+.ExploreCategory {
+    background: greenyellow;
+    max-width: 1050px;
+    width: 90%;
+    margin: 0 auto;
+    padding: calc(2vmin + 1rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
