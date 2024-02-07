@@ -7,6 +7,10 @@ import Logo from './Logo/Logo'
 import MobileHeader from './MobileHeader'
 import Navigation from './Navigation/Navigation'
 import Image from 'next/image'
+import { MdEmail } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
+import CartList from './CartList'
+import Link from 'next/link'
 
 
 const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
@@ -17,20 +21,27 @@ const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
     <div className={classes.Header} filteredproducts={filteredproducts}>
       <div className={classes.headersize}>
         <div className={classes.headerBanner}>
-          <div>
-            <Image src={'/images/gabnet-3.webp'} alt='gabnet banner' height={120} width={120} />
-            <Image src={'/images/gabnet-7.webp'} alt='gabnet banner' height={120} width={120} />
-          </div>
           <Logo />
-          <div>
-            <Image src={'/images/gabnet-6.webp'} alt='gabnet banner' height={120} width={120} />
-            <Image src={'/images/gabnet-8.webp'} alt='gabnet banner' height={120} width={120} />
-          </div>
+          <Navigation />
+          <CartList />
         </div>
         {/* <Search onSearchResult={onSearchResult} /> */}
         {exploreModal && <Explore products={products} categories={categories} />}
       </div>
-      <Navigation />
+      <div className={classes.Contact}>
+        <Link className={classes.ContactLink} href='mailto:gabnet100@gmail.com'>
+          <div>
+            <MdEmail />
+            <p>gabnet100@gmail.com</p>
+          </div>
+        </Link>
+        <Link className={classes.ContactLink} href='tel:+233 302243847'>
+          <div>
+            <IoCall />
+            <p>+233 302243847</p>
+          </div>
+        </Link>
+      </div>
       <MobileHeader onSearchResult={onSearchResult} />
     </div>
   )

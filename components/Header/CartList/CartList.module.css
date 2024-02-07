@@ -1,0 +1,20 @@
+.CartList {
+    font-size: clamp(1.3rem, 4vw + 1rem, 1.7rem);
+    position: relative;
+    color: rgb(83, 83, 83);
+}
+
+.CartCount {
+    position: absolute;
+    top: -70%;
+    left: 70%;
+    font-weight: bold;
+}
+
+@media (width >=700px) {
+    .CartCount {
+        position: absolute;
+        top: -90%;
+        left: 90%;
+    }
+}

@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { createClient } from 'contentful'
 import Layout from '../components/Layout/Layout'
+import Lenis from '@studio-freight/lenis'
 import Featured from '../components/Featured/Featured'
 import BackgroundSwiper from '../components/backgroundSwiper/BackgroundSwiper'
 import ServicesOffer from '../components/LandingPage/servicesOffer/ServicesOffer'
-import Partner from '../components/LandingPage/partners/Partner'
 import Category from '../components/LandingPage/category/Category'
 
 
 const Index = (props) => {
   const { products } = props
   const { featuredProducts, productCategories, allProducts } = products
+
+  /*A SCROLLING EFFECT
+-------------------------------START----------------------------*/
+  useEffect(() => {
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  })
+  /*------------------------------END-----------------------------*/
 
   return (
     <>

@@ -8,15 +8,16 @@ display: flex;
 }
 
 .logoContainer img{
-    height: 4rem;
+    height: clamp(5rem, 7vw + 1rem, 8rem);
     width: auto;
 }
 
-@media (min-width: 730px) {
+/* @media (min-width: 730px) {
 .logoContainer img {
         height: clamp(10rem, 10vw + 1rem, 13rem);
     }
 }
 
+*/
 
 
