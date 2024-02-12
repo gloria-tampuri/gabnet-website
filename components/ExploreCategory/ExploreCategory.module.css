@@ -1,9 +1,20 @@
 .ExploreCategory {
-    background: greenyellow;
     max-width: 1050px;
     width: 90%;
     margin: 0 auto;
     padding: calc(2vmin + 1rem);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: calc(2vmin + 1rem);
+        height: auto;
+    }
+    
+    .CategoryItem {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: calc(2vmin + 0.5rem);
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
 }

@@ -1,5 +1,5 @@
 .Category {
-    height: 80svh;
+    min-height: 80svh;
     padding: 5rem 0;
 }
 
