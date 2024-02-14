@@ -62,9 +62,11 @@
 @media (width <=780px) {
     .Container {
         grid-template-areas:
-            'a a b b'
-            'a a b b'
-            'e e f f'
+            'a a a a'
+                'b b c c'
+                'd d e e'
+                'f f f f'
             'g h i j';
+        grid-template-rows: auto;
     }
 }
