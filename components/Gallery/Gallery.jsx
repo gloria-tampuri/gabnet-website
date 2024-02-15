@@ -2,8 +2,8 @@ import Image from 'next/image'
 import ShuffleHero from '../shared/shuffleGallery/ShuffleGallery'
 import React, { useRef } from 'react'
 import styles from './Gallery.module.css'
-import SlideIn from '../shared/slideIn/SlideIn'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { SwipeCarousel } from './SwipeCarousel'
 
 const Gallery = () => {
     const ref = useRef();
@@ -28,8 +28,8 @@ const Gallery = () => {
                     className='my-6'>
                     <Image src={'/images/showroom.webp'} alt={'gabnet showroom'} height={400} width={1200} />
                 </motion.div>
-
             </section>
+            <SwipeCarousel />
         </>
 
     )
