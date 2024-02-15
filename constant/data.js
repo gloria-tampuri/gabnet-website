@@ -5,16 +5,12 @@ const SERVICES = [
 ]
 
 const GALLERY = [
-    { id: 1, image: '/images/gabnet-3.jpeg' },
-    { id: 2, image: '/images/gabnet-4.jpeg' },
-    { id: 3, image: '/images/gabnet-5.jpeg' },
-    { id: 4, image: '/images/gabnet-6.jpeg' },
-    { id: 5, image: '/images/gabnet-7.jpeg' },
-    { id: 6, image: '/images/gabnet-8.jpeg' },
-    { id: 7, image: '/images/gabnet-8.jpeg' },
-    { id: 8, image: '/images/gabnet-8.jpeg' },
-    { id: 9, image: '/images/gabnet-8.jpeg' },
-    { id: 10, image: '/images/gabnet-8.jpeg' },
+    { id: 1, src: '/images/gabnet-3.webp' },
+    { id: 2, src: '/images/gabnet-4.webp' },
+    { id: 3, src: '/images/gabnet-5.webp' },
+    { id: 4, src: '/images/gabnet-6.webp' },
+    { id: 5, src: '/images/gabnet-7.webp' },
+    { id: 6, src: '/images/gabnet-8.webp' },
 ]
 
 export {
