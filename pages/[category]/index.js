@@ -59,7 +59,8 @@ const CategoryPage = () => {
                                     <div className={classes.callNow}>
                                         <p> <a href="tel:+233595850394">Call now</a>
                                         </p>
-                                    </div> </div>
+                                    </div>
+                                </div>
                             </Bounce>
                         </div>
                         )}

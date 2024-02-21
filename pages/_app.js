@@ -6,11 +6,13 @@ import { SubcategoryContextProvider } from '../context/SubcategoryContext'
 import { ProductContextProvider } from '../context/ProductContext'
 import { SearchContextProvider } from '../context/SearchContext'
 import ProgressBar from '../components/shared/progressBar/ProgressBar'
+import { Provider } from 'jotai'
 
 function MyApp({ Component, pageProps }) {
   return (
     <SearchContextProvider>
       <ProgressBar />
+      <Provider>
       < ProductContextProvider >
         <SubcategoryContextProvider>
           <ModalContextProvider>
@@ -21,7 +23,8 @@ function MyApp({ Component, pageProps }) {
             </ExploreDropdownContextProvider>
           </ModalContextProvider>
         </SubcategoryContextProvider>
-      </ProductContextProvider>
+        </ProductContextProvider>
+      </Provider>
     </SearchContextProvider>
   )
 }
