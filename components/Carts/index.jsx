@@ -87,10 +87,10 @@ export default function Carts() {
   }
   return (
     <section className='min-h-screen'>
-      <div className=' flex gap-4 rounded-md max-w-[1200px] mx-auto m-4 p-4'>
+      <div className='md:flex gap-4 rounded-md max-w-[1200px] mx-auto mt-1 p-4'>
         <div className='w-full bg-white rounded min-h-20'>{element}</div>
         {orderData.length > 0 && (
-          <div className='bg-gray-300 w-1/3 max-h-[300px] rounded p-4 flex items-center justify-center'>
+          <div className='bg-gray-300 mt-4 md:mt-0 w-full md:w-1/3 max-h-[300px] rounded p-4 flex items-center justify-center'>
             <form onSubmit={sendEmail} className='w-full flex flex-col gap-2'>
               <div className='flex flex-col'>
                 <label className='' htmlFor='name'>
