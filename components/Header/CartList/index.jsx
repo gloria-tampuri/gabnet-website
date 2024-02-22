@@ -6,9 +6,6 @@ import { useOrderData } from '../../../library/jotai-config/order';
 
 export default function CartList() {
     const [orders, setOrders] = useOrderData();
-
-    console.log(orders);
-
     return (
         <Link href={'/cart'} className={classes.CartList}>
             <FaShoppingCart />

@@ -4,6 +4,8 @@ import { getProducts, getSubcategories } from '../../Helpers/queries'
 import { slugify, unSlugify } from '../../Helpers/slugify'
 import classes from '../../components/Category/CategoryPage.module.css'
 import Layout from '../../components/Layout/Layout'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Bounce from 'react-reveal/Bounce';
 import Head from 'next/head'
 import Image from 'next/image'
@@ -18,8 +20,16 @@ const SubCategoriesPage = () => {
 
   const [orderData, setOrderData] = useOrderData();
 
+  const notify = () => toast.success("Item added to cart", {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+  });
+
   const handleAddToCart = (product) => {
     setOrderData([...orderData, product])
+    return notify();
   }
 
   useEffect(() => {
@@ -79,6 +89,7 @@ const SubCategoriesPage = () => {
 
         </div>
       </Layout>
+      <ToastContainer />
     </>
   )
 }

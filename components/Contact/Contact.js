@@ -16,7 +16,6 @@ import { TbBrandInstagram } from 'react-icons/tb'
 const Contact = () => {
     const form = useRef();
 
-    // console.log(typeof`${showEnv}`);
     const notify = () => toast.success("Great! Form has been submited",{
         position: "top-center",
         autoClose: 2000,
@@ -37,8 +36,7 @@ const Contact = () => {
         setIsLoading(true)
 
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID,process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
-      .then((result) => {
-        
+            .then((result) => {
           result.text === "OK" && setIsLoading(false)
       }, (error) => {
           console.log(error.text);
@@ -61,18 +59,6 @@ const Contact = () => {
 
         notify()
     }
-  
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //     const serviceId=process.env.SERVICE_ID
-
-    //     emailjs.sendForm("service_niyip6b","template_3m65f2b", form.current,"jk3fznquANl-FgKAE")
-    //         .then((result) => {
-    //             console.log(result.text);
-    //         }, (error) => {
-    //             console.log(error.text);
-    //         });
-    // };
 
     return (
         <Layout>

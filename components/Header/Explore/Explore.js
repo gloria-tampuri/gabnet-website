@@ -23,16 +23,6 @@ const Explore = () => {
     fetchProducts()
   }, [])
 
-
-  // const retrieveSubcategories = async (category) => {
-  //   const subcategories = await getSubcategories(category)
-  //   // setSubCategories(subcategories)
-  //   console.log(typeof category);
-  //   console.log(subcategories)
-  // }
-
-  // console.log(subCategories && subCategories);
-
   return (
   <Zoom>
       <div className={classes.exploreoverlay} >
