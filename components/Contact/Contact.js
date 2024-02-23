@@ -35,12 +35,14 @@ const Contact = () => {
         e.preventDefault()
         setIsLoading(true)
 
-        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID,process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
+        console.log(form.current);
+
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
             .then((result) => {
-          result.text === "OK" && setIsLoading(false)
-      }, (error) => {
-          console.log(error.text);
-      });
+                result.text === "OK" && setIsLoading(false)
+            }, (error) => {
+                console.log(error.text);
+            });
 
         const recievedMsg={
             firstName,
@@ -49,7 +51,6 @@ const Contact = () => {
             phone,
             message
         }
-       
 
         setEmail('')
         setFirstName('')

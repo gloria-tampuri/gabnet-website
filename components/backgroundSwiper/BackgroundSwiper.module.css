@@ -39,6 +39,6 @@
 
 @media(width <=780px) {
     .BackgroundSwiper {
-        height: 50svh;
+        height: fit-content;
     }
 }

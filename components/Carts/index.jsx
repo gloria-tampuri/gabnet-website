@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useOrderData } from '../../library/jotai-config/order'
 import Image from 'next/image';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import emailjs from '@emailjs/browser';
+
 
 export default function Carts() {
   const [orderData, setOrderData] = useOrderData();
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [contact, setContact] = useState('');
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter();
+
+  const form = useRef();
 
   const removeOrderById = (id) => {
     setOrderData(orderData.filter((order) => order.product.sys.id !== id));
@@ -26,29 +31,42 @@ export default function Carts() {
     e.preventDefault();
     setIsLoading(true)
 
-    const orders = orderData.map((order) => order.product.fields.title)
-    const data = {
-      name,
-      contact,
+    const orders = orderData.map((order) => order.product.fields.title);
+    const orderMessage = orders.map((order) => `${order}`);
+
+    const templateParams = {
+      firstName,
+      lastName,
+      phone: contact,
       email,
-      orders
+      message: `Orders: [${orderMessage.join(', ')}]`,
     }
-    console.log('SENDING DATA');
-    console.log(data);
-    console.log('SENDING DATA');
-    toast.success("Order has been placed, we will contact you shortly", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-    });
+
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, templateParams, process.env.NEXT_PUBLIC_PUBLIC_KEY)
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+        toast.success("Order has been placed, we will contact you shortly", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+        });
     // Clear fields
-    setName('');
-    setContact('')
-    setEmail('')
-    setIsLoading(false)
-    clearOrder();
-    return router.push('/')
+        setFirstName('');
+        setContact('')
+        setEmail('')
+        setIsLoading(false)
+        clearOrder();
+        return router.push('/')
+      }, function (error) {
+        console.log('FAILED...', error);
+        toast.error("Something went wrong", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+        })
+      });
   }
 
   let element;
@@ -90,34 +108,49 @@ export default function Carts() {
       <div className='md:flex gap-4 rounded-md max-w-[1200px] mx-auto mt-1 p-4'>
         <div className='w-full bg-white rounded min-h-20'>{element}</div>
         {orderData.length > 0 && (
-          <div className='bg-gray-300 mt-4 md:mt-0 w-full md:w-1/3 max-h-[300px] rounded p-4 flex items-center justify-center'>
-            <form onSubmit={sendEmail} className='w-full flex flex-col gap-2'>
+          <div className='bg-gray-300 mt-4 md:mt-0 w-full md:w-1/3  rounded p-4 flex items-center justify-center'>
+            <form ref={form} onSubmit={sendEmail} className='w-full flex flex-col gap-2'>
               <div className='flex flex-col'>
-                <label className='' htmlFor='name'>
-                  Name
+                <label className='' htmlFor='firstName'>
+                  First Name
                 </label>
                 <input
                   aria-disabled={isLoading}
-                  value={name}
+                  value={firstName}
                   required
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setFirstName(e.target.value)}
                   className='px-1 py-2 rounded outline-1 outline-neutral-500'
                   type='text'
-                  id='name'
+                  id='firstName'
                 />
               </div>
               <div className='flex flex-col'>
-                <label className='' htmlFor='contact'>
+                <label className='' htmlFor='lastName'>
+                  Last Name
+                </label>
+                <input
+                  aria-disabled={isLoading}
+                  value={lastName}
+                  required
+                  onChange={(e) => setLastName(e.target.value)}
+                  className='px-1 py-2 rounded outline-1 outline-neutral-500'
+                  type='text'
+                  id='lastName'
+                />
+              </div>
+              <div className='flex flex-col'>
+                <label className='' htmlFor='phone'>
                   Contact Number
                 </label>
                 <input
                   value={contact}
+                  name='phone'
                   aria-disabled={isLoading}
                   required
                   onChange={(e) => setContact(e.target.value)}
                   className='px-1 py-2 rounded outline-1 outline-neutral-500'
                   type='text'
-                  id='contact'
+                  id='phone'
                 />
               </div>
               <div className='flex flex-col'>
@@ -126,6 +159,7 @@ export default function Carts() {
                 </label>
                 <input
                   value={email}
+                  name='mail'
                   aria-disabled={isLoading}
                   onChange={(e) => setEmail(e.target.value)}
                   className='px-1 py-2 rounded outline-1 outline-neutral-500'
