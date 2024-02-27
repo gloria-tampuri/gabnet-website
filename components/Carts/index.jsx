@@ -26,8 +26,6 @@ export default function Carts() {
     setOrderData(orderData.filter((order) => order.product.sys.id !== id));
   };
 
-  console.log(orderData);
-  console.log(quantity)
   // Function to clear the order from localStorage
   const clearOrder = () => {
     setOrderData([]);
@@ -51,7 +49,6 @@ export default function Carts() {
 
     emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, templateParams, process.env.NEXT_PUBLIC_PUBLIC_KEY)
       .then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
         toast.success("Order has been placed, we will contact you shortly", {
           position: "top-center",
           autoClose: 2000,
@@ -66,7 +63,6 @@ export default function Carts() {
         clearOrder();
         return router.push('/')
       }, function (error) {
-        console.log('FAILED...', error);
         setIsLoading(false)
         return toast.error("Something went wrong", {
           position: "top-center",

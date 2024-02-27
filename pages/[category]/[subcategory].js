@@ -28,8 +28,21 @@ const SubCategoriesPage = () => {
   });
 
   const handleAddToCart = (product) => {
-    setOrderData([...orderData, { ...product, quantity: 1 }])
-    return notify();
+    const productId = product.product.sys.id
+    const productInCart = orderData.filter((order) => order.product.sys.id === productId);
+    console.log(productInCart.length);
+    if (productInCart.length > 0) {
+      setOrderData(orderData.map((order) => {
+        if (order.product.sys.id === productId) {
+          return { ...order, quantity: order.quantity + 1 };
+        }
+        return order;
+      }));
+      return notify();
+    } else {
+      setOrderData([...orderData, { ...product, quantity: 1 }])
+      return notify();
+    }
   }
 
   useEffect(() => {

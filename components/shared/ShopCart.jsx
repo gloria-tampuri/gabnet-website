@@ -6,7 +6,6 @@ import Link from 'next/link';
 export default function ShopCart() {
     const [orders] = useOrderData();
     const totalOrders = orders.reduce((acc, order) => acc + order.quantity, 0);
-    console.log(totalOrders);
     return (
         <Link href={'/cart'}>
             <Box position="relative" fontSize={"1.5rem"} _hover={{ cursor: "pointer" }}>
