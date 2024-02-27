@@ -93,6 +93,7 @@ export default function Carts() {
                 {order.product.fields.title}
               </h3>
               <p className="text-gray-500 text-sm font-semibold">{order.product.fields.description}</p>
+              <div className="flex justify-between items-center my-3">
               <button
                 className='text-red-600 text-sm'
                 onClick={() => removeOrderById(order.product.sys.id)}
@@ -100,6 +101,7 @@ export default function Carts() {
                 Delete
               </button>
               <QuantitySelector orderId={order.product.sys.id} />
+              </div>
             </div>
           </div>
         </section>

@@ -7,10 +7,10 @@ export default function ShopCart() {
     const [orders] = useOrderData();
     const totalOrders = orders.reduce((acc, order) => acc + order.quantity, 0);
     return (
-        <Link href={'/cart'}>
+        <Link href={'/cart'} className={`${totalOrders > 0 ? 'text-red-500' : 'text-gray-500'}`}>
             <Box position="relative" fontSize={"1.5rem"} _hover={{ cursor: "pointer" }}>
-                <span className='text-gray-600'><FaShoppingCart /></span>
-                <Badge position="absolute" top="-25px" right="-5px" colorScheme="red">
+                <span><FaShoppingCart /></span>
+                <Badge fontWeight={"bold"} position="absolute" top="-25px" right="-5px">
                     {totalOrders}
                 </Badge>
             </Box>
