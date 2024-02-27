@@ -6,6 +6,7 @@ import { useOrderData } from '../../../library/jotai-config/order';
 
 export default function CartList() {
     const [orders] = useOrderData();
+    // Function to calculate the orders quantity
     return (
         <Link href={'/cart'} className={`${classes.CartList} ${orders.length > 0 ? classes.CartListSpanActive : ''}`} >
             <FaShoppingCart />

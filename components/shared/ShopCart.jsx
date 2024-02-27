@@ -5,12 +5,14 @@ import Link from 'next/link';
 
 export default function ShopCart() {
     const [orders] = useOrderData();
+    const totalOrders = orders.reduce((acc, order) => acc + order.quantity, 0);
+    console.log(totalOrders);
     return (
         <Link href={'/cart'}>
             <Box position="relative" fontSize={"1.5rem"} _hover={{ cursor: "pointer" }}>
                 <span className='text-gray-600'><FaShoppingCart /></span>
                 <Badge position="absolute" top="-25px" right="-5px" colorScheme="red">
-                    {orders.length}
+                    {totalOrders}
                 </Badge>
             </Box>
         </Link>
