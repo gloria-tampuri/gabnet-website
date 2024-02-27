@@ -28,7 +28,7 @@ const SubCategoriesPage = () => {
   });
 
   const handleAddToCart = (product) => {
-    setOrderData([...orderData, product])
+    setOrderData([...orderData, { ...product, quantity: 1 }])
     return notify();
   }
 

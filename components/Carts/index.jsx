@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
 import emailjs from '@emailjs/browser';
 import SpringModal from '../shared/springModal/SpringModal';
+import QuantitySelector from './QuantitySelector';
 
 
 export default function Carts() {
@@ -17,6 +18,7 @@ export default function Carts() {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false)
+  const [quantity, setQuantity] = useState(0)
 
   const form = useRef();
 
@@ -24,6 +26,8 @@ export default function Carts() {
     setOrderData(orderData.filter((order) => order.product.sys.id !== id));
   };
 
+  console.log(orderData);
+  console.log(quantity)
   // Function to clear the order from localStorage
   const clearOrder = () => {
     setOrderData([]);
@@ -79,7 +83,6 @@ export default function Carts() {
     element = orderData.map((order) => {
       return (
         <section className='' key={order.product.sys.id}>
-
           <div
             className='flex items-center gap-4 border-b border-spacing-0 border-gray-300 p-4'
           >
@@ -100,6 +103,7 @@ export default function Carts() {
               >
                 Delete
               </button>
+              <QuantitySelector orderId={order.product.sys.id} />
             </div>
           </div>
         </section>
