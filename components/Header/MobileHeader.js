@@ -8,6 +8,7 @@ import { MobileModalContext } from '../../context/MobileModalContext';
 import { SearchContext } from '../../context/SearchContext';
 import { getProducts } from '../../Helpers/queries';
 import CartList from './CartList';
+import ShopCart from '../shared/ShopCart';
 
 
 const MobileHeader = ({ onSearchResult }) => {
@@ -58,7 +59,7 @@ const MobileHeader = ({ onSearchResult }) => {
         {searchOnSmallScreen ? <div className={classes.Search}>
           <input type='search' placeholder='Search products, brands and categories' ref={inputRef} onChange={inputHandler} />
         </div> : <Logo />}
-        <CartList />
+        <ShopCart />
         {/* <ImSearch className={classes.searchIcon} onClick={onToggleSearchHandler} />*/}
       </div>
     </div>

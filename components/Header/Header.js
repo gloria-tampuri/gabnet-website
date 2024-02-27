@@ -11,6 +11,7 @@ import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import CartList from './CartList'
 import Link from 'next/link'
+import ShopCart from '../shared/ShopCart'
 
 
 const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
@@ -23,7 +24,8 @@ const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
         <div className={classes.headerBanner}>
           <Logo />
           <Navigation />
-          <CartList />
+          {/* <CartList />*/}
+          <ShopCart itemCount={'3'} />
         </div>
         {/* <Search onSearchResult={onSearchResult} /> */}
         {exploreModal && <Explore products={products} categories={categories} />}

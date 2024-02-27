@@ -5,7 +5,6 @@
 .mobileHeader{
     display: none;
     padding: 1rem;
-    font-size: 3rem;
     align-items: center;
     min-height: 110px;
     justify-content: space-between;
@@ -14,6 +13,7 @@
 .menu{
     color: var(--gabnet-main);
     cursor: pointer;
+    font-size: 3rem;
 }
 .menu:hover{
     color: var(--gabnet-secondary)
@@ -21,6 +21,7 @@
 .searchIcon{
     font-size: 2rem;
     color: #0C2850;
+    font-size: 3rem;
 }
 
 .overallSearch{
