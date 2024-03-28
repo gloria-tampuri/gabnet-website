@@ -1,0 +1,38 @@
+.Container {
+    height: 70svh;
+    width: 100%;
+    display: flex;
+}
+
+.Slider {
+    width: 50%;
+    height: 100%;
+    background: green;
+}
+
+.SliderInformation {
+    width: 50%;
+    height: 100%;
+    background: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: calc(1rem + 1vw);
+    align-items: center;
+    justify-content: center;
+}
+
+@media (width <=780px) {
+    .Container {
+        flex-direction: column;
+    }
+
+    .Slider {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .SliderInformation {
+        width: 100%;
+        height: 30%;
+    }
+}

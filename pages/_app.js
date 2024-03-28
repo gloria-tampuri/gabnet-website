@@ -7,6 +7,7 @@ import { ProductContextProvider } from '../context/ProductContext'
 import { SearchContextProvider } from '../context/SearchContext'
 import ProgressBar from '../components/shared/progressBar/ProgressBar'
 import { Provider } from 'jotai'
+import PageScrollProvider from '../components/PageScrollProvider'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,8 +18,11 @@ function MyApp({ Component, pageProps }) {
         <SubcategoryContextProvider>
           <ModalContextProvider>
             <ExploreDropdownContextProvider>
-              <MobileModalContextProvider>
-                <Component {...pageProps} />
+                <MobileModalContextProvider>
+                  <PageScrollProvider>
+                    <Component {...pageProps} />
+                  </PageScrollProvider>
+
               </MobileModalContextProvider>
             </ExploreDropdownContextProvider>
           </ModalContextProvider>

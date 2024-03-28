@@ -7,23 +7,27 @@ import Featured from '../components/Featured/Featured'
 import BackgroundSwiper from '../components/backgroundSwiper/BackgroundSwiper'
 import ServicesOffer from '../components/LandingPage/servicesOffer/ServicesOffer'
 import Category from '../components/LandingPage/category/Category'
+import NewLandings from '../components/NewLandings'
+
 
 
 const Index = (props) => {
   const { products } = props
   const { featuredProducts, productCategories, allProducts } = products
 
+
   /*A SCROLLING EFFECT
 -------------------------------START----------------------------*/
-  useEffect(() => {
-    const lenis = new Lenis()
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-  })
+  // useEffect(() => {
+  //   const lenis = new Lenis()
+  //   function raf(time) {
+  //     lenis.raf(time)
+  //     requestAnimationFrame(raf)
+  //   }
+  //   requestAnimationFrame(raf)
+  // })
   /*------------------------------END-----------------------------*/
+
 
   return (
     <>
@@ -39,6 +43,7 @@ const Index = (props) => {
         <BackgroundSwiper />
         <Featured products={featuredProducts} />
         <Category />
+        { /*<NewLandings />*/}
         <ServicesOffer />
         {/* <Partner /> */}
       </Layout>

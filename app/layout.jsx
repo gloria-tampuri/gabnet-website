@@ -1,3 +1,6 @@
+import '../styles/globals.css'
+import PageScrollProvider from '../components/PageScrollProvider'
+
 export const metadata = {
     title: 'Gabnet',
     description:
@@ -7,8 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
-            <body>
-                {children}
+            <body className='new-home'>
+                <PageScrollProvider>
+                    {children}
+                </PageScrollProvider>
             </body>
         </html>
     );

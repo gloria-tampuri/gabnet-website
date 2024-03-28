@@ -51,3 +51,7 @@ a {
   box-sizing: border-box;
 }
 
+.new-home {
+  background: var(--gradient);
+  height: 4000px;
+}

@@ -14,23 +14,23 @@ import {
   Autoplay,
   Pagination,
   Navigation,
-  EffectCoverflow,
 } from 'swiper/modules';
 
 import styles from './BackgroundSwiper.module.css';
+import { BACKGROUND_SLIDER_IMAGES } from '../../constant/data';
 
-const SLIDER_DATA = [
-  {
-    id: 1,
-    content: '',
-    bg_url: '/images/slider-1.webp',
-  },
-  {
-    id: 2,
-    content: '',
-    bg_url: '/images/slider-2.webp',
-  }
-];
+// const SLIDER_DATA = [
+//   {
+//     id: 1,
+//     content: '',
+//     bg_url: '/images/slider-1.webp',
+//   },
+//   {
+//     id: 2,
+//     content: '',
+//     bg_url: '/images/slider-2.webp',
+//   }
+// ];
 
 export default function BackgroundSwiper() {
   return (
@@ -59,13 +59,13 @@ export default function BackgroundSwiper() {
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
         >
-          {SLIDER_DATA.map((slider) => (
+          {BACKGROUND_SLIDER_IMAGES.map((slider) => (
             <SwiperSlide className={styles.Swiper} key={slider.id}>
               <div className={`${styles.Content}`}>
                 <Image
                   className={styles.Image}
-                  src={slider.bg_url}
-                  alt={slider.content}
+                  src={slider.src}
+                  alt={`Background slider ${slider.id}`}
                   height={1000}
                   width={2000}
                 />
