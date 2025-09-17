@@ -1,52 +1,206 @@
 .exploreoverlay{
-    /* width:fit-content; */
-    position: fixed;
-    width: 90%;
-    height: fit-content;
-    /* display: flex; */
+    position: absolute;
+    width: 100vw;
+    max-height: 80vh;
     background-color: white;
     font-weight: 100;
     font-size: 1rem;
     color: #0C2850;
     padding: 2rem;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius:15px ;
-    top: 80px;
-    right: 2%;
-    /* display: none; */
-    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.25);
-    z-index:5;
+    border-radius: 0 0 15px 15px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .explorelist{
-    column-count: 3;
-    column-gap: 2rem;
-    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 0.8rem;
+    scroll-behavior: smooth;
+}
+
+/* Simple scrollbar styling */
+.explorelist::-webkit-scrollbar {
+    width: 6px;
+}
+
+.explorelist::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.explorelist::-webkit-scrollbar-thumb {
+    background: var(--gabnet-main, #0C2850);
+    border-radius: 3px;
+}
+
+.explorelist::-webkit-scrollbar-thumb:hover {
+    background: var(--gabnet-yellow, #FFD700);
 }
 
 .explorelist ul{
-    margin-bottom: 3rem;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 4px;
 }
 
 .exploreoverlay ul li{
     list-style: none;
     cursor: pointer;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    margin-bottom: 0.3rem;
+}
+
+.exploreoverlay ul li:hover {
+    color: var(--gabnet-yellow);
 }
 
 .subCategory{
     list-style: none;
     font-size: 0.7rem;
     font-weight: 400;
-    margin: 0.5rem;
+    margin: 0.2rem 0;
+    color: #666;
+    padding: 0.1rem 0;
 }
 
 .subCategory:hover{
-    background-color: #203c63;
-    color: white;
-    width: fit-content;
-    padding: 0 0.3rem;
+    color: var(--gabnet-yellow);
 }
 
 .mobilelist li{
     list-style:none;
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gabnet-main);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.closeButton:hover {
+    background: var(--gabnet-yellow);
+    color: var(--gabnet-main);
+    transform: scale(1.1);
+}
+
+.loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--gabnet-main);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.errorState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #e74c3c;
+    text-align: center;
+}
+
+
+/* Responsive design for mobile devices */
+@media (max-width: 1024px) {
+    .explorelist {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .exploreoverlay {
+        max-height: 70vh;
+        padding: 0.8rem;
+    }
+    
+    .explorelist {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.6rem;
+        max-height: 60vh;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .exploreoverlay {
+        padding: 0.6rem;
+        max-height: 60vh;
+    }
+    
+    .explorelist {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+        max-height: 50vh;
+        padding: 0.4rem;
+    }
+    
+    .explorelist ul {
+        padding: 0.6rem;
+    }
+    
+    .closeButton {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
 }

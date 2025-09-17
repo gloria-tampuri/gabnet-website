@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const ShuffleHero = () => {
     return (
@@ -79,17 +79,17 @@ const ShuffleGrid = () => {
     const timeoutRef = useRef(null);
     const [squares, setSquares] = useState(generateSquares());
 
+    const shuffleSquares = useCallback(() => {
+        setSquares(generateSquares());
+
+        timeoutRef.current = setTimeout(shuffleSquares, 3000);
+    }, []);
+
     useEffect(() => {
         shuffleSquares();
 
         return () => clearTimeout(timeoutRef.current);
-    }, []);
-
-    const shuffleSquares = () => {
-        setSquares(generateSquares());
-
-        timeoutRef.current = setTimeout(shuffleSquares, 3000);
-    };
+    }, [shuffleSquares]);
 
     return (
         <div className="grid grid-cols-2 grid-rows-2 h-[450px] gap-1">

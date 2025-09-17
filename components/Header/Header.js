@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useEffect } from 'react'
 import { ModalContext } from '../../context/ModalContext'
 import Explore from './Explore/Explore'
 import classes from './Header.module.css'
@@ -17,9 +17,26 @@ import ShopCart from '../shared/ShopCart'
 const Header = ({ products, categories, filteredproducts, onSearchResult }) => {
 
   const exploreModalContext = useContext(ModalContext)
-  const { exploreModal } = exploreModalContext
+  const { exploreModal, hideExplore } = exploreModalContext
+  const headerRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (exploreModal && headerRef.current && !headerRef.current.contains(event.target)) {
+        hideExplore()
+      }
+    }
+
+    if (exploreModal) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [exploreModal, hideExplore])
   return (
-    <div className={classes.Header} filteredproducts={filteredproducts}>
+    <div className={classes.Header} filteredproducts={filteredproducts} ref={headerRef}>
       <div className={classes.headersize}>
         <div className={classes.headerBanner}>
           <Logo />
