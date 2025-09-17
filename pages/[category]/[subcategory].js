@@ -132,7 +132,7 @@ const SubCategoriesPage = () => {
             <div className={classes.emptyState}>
               <div className={classes.emptyIcon}>📦</div>
               <h3>No products found</h3>
-              <p>We couldn't find any products in this category. Please check back later.</p>
+              <p>We couldn&apos;t find any products in this category. Please check back later.</p>
             </div>
           )}
         </div>
