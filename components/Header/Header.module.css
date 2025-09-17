@@ -1,14 +1,20 @@
 .Header {
     background-color: var(--white-prime);
     width: 100%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 .headerBanner {
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3vw;
+    padding: 1rem 2rem;
+    position: relative;
 }
 
 .headerBanner>div {
@@ -18,8 +24,7 @@
 }
 
 .headersize {
-    /* width: 90%; */
-    /* padding: clamp(1rem, 3vh + 1rem, 1.8rem) 0; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +32,8 @@
     margin: 0 auto;
     color: var(--blue-prime);
     position: relative;
-
+    z-index: 10;
+    overflow: visible;
 }
 
 .mobileHeader {
@@ -59,27 +65,52 @@
     gap: 0.2rem;
 }
 
+@media (max-width: 1024px) {
+    .headerBanner {
+        padding: 1rem 1.5rem;
+    }
+}
+
 @media (max-width: 780px) {
     .Header {
         width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .headerBanner {
+        padding: 1rem;
+    }
+    
     .headersize {
         width: 100%;
-        padding: 1rem;
+        padding: 0;
         display: none;
     }
 
-        .mobileHeader {
-            display: flex;
-        }
+    .mobileHeader {
+        display: flex;
+    }
 
-        .Contact {
-            order: 1;
-        }
+    .Contact {
+        order: 1;
+    }
+
+    .ContactLink {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerBanner {
+        padding: 0.8rem;
+    }
     
-        .ContactLink {
-            font-size: 1rem;
-        }
+    .Contact {
+        padding: 0.5rem 0;
+    }
+    
+    .ContactLink {
+        font-size: 0.9rem;
+    }
 }
