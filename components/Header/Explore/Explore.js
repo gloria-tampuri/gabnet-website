@@ -12,8 +12,6 @@ const Explore = () => {
    const productsData = useContext(ProductContext)
    const {products} =productsData
 
-
-
   useEffect(() => {
     const fetchProducts = async () => {
       const products = await getProductCategories()

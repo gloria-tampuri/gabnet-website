@@ -22,11 +22,7 @@ const ExploreList = () => {
   const [openTI, setOpenTI] = useState(false)
   const [openPC, setOpenPC] = useState(false)
 
-
-
   const [isopen, setIsopen] = useState(false)
-
-
 
   return (
     <div>
