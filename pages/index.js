@@ -12,7 +12,7 @@ import NewLandings from '../components/NewLandings'
 
 
 const Index = (props) => {
-  const { products } = props
+  const { products } = props;
   const { featuredProducts, productCategories, allProducts } = products
 
 

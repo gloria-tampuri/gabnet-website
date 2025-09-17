@@ -17,6 +17,7 @@ const SubCategoriesPage = () => {
   const { category, subcategory } = router.query
   const [products, setProducts] = useState()
   const [productTitle, setProductTitle] = useState()
+  const [loading, setLoading] = useState(true)
 
   const [orderData, setOrderData] = useOrderData();
 
@@ -46,12 +47,18 @@ const SubCategoriesPage = () => {
   }
 
   useEffect(() => {
-
     const fetchData = async () => {
-      const products = await getProducts()
-      // let filter for the category we passed in our url
-      const filteredCategory = products && products.filter((product) => (product.fields.category && slugify(product.fields.category) === category) && (product.fields.subCategory && slugify(product.fields.subCategory) === subcategory))
-      setProducts(filteredCategory)
+      setLoading(true)
+      try {
+        const products = await getProducts()
+        // let filter for the category we passed in our url
+        const filteredCategory = products && products.filter((product) => (product.fields.category && slugify(product.fields.category) === category) && (product.fields.subCategory && slugify(product.fields.subCategory) === subcategory))
+        setProducts(filteredCategory)
+      } catch (error) {
+        console.error('Error fetching products:', error)
+      } finally {
+        setLoading(false)
+      }
     }
     fetchData();
   }, [category, subcategory])
@@ -76,30 +83,58 @@ const SubCategoriesPage = () => {
       </Head>
       <Layout>
         <div className={classes.categoryPage}>
-
-          <h1>{subcategory && subcategory.toUpperCase().replaceAll('-', ' ')}</h1>
-
-          <div className={classes.griddy}>
-            {products && products.map(product => <div key={product.sys.id}>
-              <Bounce bottom duration={1500}>
-                <div className={classes.card}>
-                  <div className={classes.imagediv}> <Image height='320' width='320' src={'https:' + product.fields.image.fields.file.url} alt={product.fields.title} /> </div>
-                  <div className={classes.description}>
-                    <h4>{product.fields.title}</h4>
-                    <p>{product.fields.description}</p>
-                  </div>
-                  <div className={classes.callNow}>
-                    <p> <a href="tel:+233595850394">Call now</a>
-                    </p>
-
-                  </div>
-                  <button onClick={() => handleAddToCart({ product })} className={classes.cartBtn}>Add to cart</button>
-                </div>
-              </Bounce>
-            </div>
-            )}
+          <div className={classes.pageHeader}>
+            <h1>{subcategory && subcategory.toUpperCase().replaceAll('-', ' ')}</h1>
+            <p className={classes.subtitle}>Discover our premium collection</p>
           </div>
 
+          {loading ? (
+            <div className={classes.loadingContainer}>
+              <div className={classes.loadingSpinner}></div>
+              <p>Loading products...</p>
+            </div>
+          ) : products && products.length > 0 ? (
+            <div className={classes.griddy}>
+              {products.map(product => (
+                <div key={product.sys.id}>
+                  <Bounce bottom duration={1500}>
+                    <div className={classes.card}>
+                      <div className={classes.imagediv}>
+                        <Image 
+                          height='400' 
+                          width='400' 
+                          src={'https:' + product.fields.image.fields.file.url} 
+                          alt={product.fields.title}
+                          className={classes.productImage}
+                        />
+                        <div className={classes.cardActions}>
+                          <div className={classes.callNow}>
+                            <p><a href="tel:+233595850394">Call now</a></p>
+                          </div>
+                          <button 
+                            onClick={() => handleAddToCart({ product })} 
+                            className={classes.cartBtn}
+                          >
+                            Add to cart
+                          </button>
+                        </div>
+                      </div>
+                      <div className={classes.productInfo}>
+                        <h4>{product.fields.title}</h4>
+                        <p>{product.fields.description}</p>
+                      </div>
+                    </div>
+                  </Bounce>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className={classes.emptyState}>
+              <div className={classes.emptyIcon}>📦</div>
+              <h3>No products found</h3>
+              <p>We couldn't find any products in this category. Please check back later.</p>
+            </div>
+          )}
         </div>
       </Layout>
       <ToastContainer />
